@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM Examples with Java Script</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .test_class{
+      color: blue;
+      font-size: 1.5em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(2n){background-color: #f2f2f2}
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .btn-group .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 15px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-group .button:hover {
+      background-color: #3e8e41;
+    }
+    .btn-group {
+      margin:20px;
+    }
+    .standard_div {
+      margin: 20px;
+      border: solid;
+      padding:10px;
+    }
+  </style>
+    
+  <script>   
+    function changeHeading() {
+      let heading = document.getElementsByClassName("test");
+      heading[0].innerHTML="DOM -Example - New Heading through Java script";
+    }
+    function changeColor() {
+        let para = document.getElementById("p1");
+        para.style.color="blue";
+    }
+    function changeClass(){
+      let para = document.getElementsByTagName("p");
+      para[1].setAttribute("class","test_class");
+    }
+    function addElement() {
+      let para = document.createElement("p");
+      let node = document.createTextNode("New paragraph added through Java Script");
+      para.appendChild(node);
+
+     var element = document.getElementById("container");
+     element.appendChild(para);
+    }
+    function removeElement() {
+      let parent = document.getElementById("container");
+      let child = document.getElementById("p_remove");
+      parent.removeChild(child)
+    }
+    function createTableFromJSON() {
+      let myBooks = [
+        {
+          "Book ID": "1",
+          "Book Name": "Computer Architecture",
+          "Category": "Computers",
+          "Price": "125.60"
+        },
+        {
+          "Book ID": "2",
+          "Book Name": "Asp.Net 4 Blue Book",
+          "Category": "Programming",
+          "Price": "56.00"
+        },
+        {
+          "Book ID": "3",
+          "Book Name": "Popular Science",
+          "Category": "Science",
+          "Price": "210.40"
+        }
+      ]
+      // EXTRACT VALUE FOR HTML HEADER. 
+      // ('Book ID', 'Book Name', 'Category' and 'Price')
+      let col = [];
+      for (let key in myBooks[0]) {
+        col.push(key);
+      } 
+      // CREATE DYNAMIC TABLE.
+      let table = document.createElement("table");
+      // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+      let tr = table.insertRow(-1);                  // TABLE ROW AT THE END
+      for (let i = 0; i < col.length; i++) {
+        let th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+      }
+      // ADD JSON DATA TO THE TABLE AS ROWS.
+      for (let i = 0; i < myBooks.length; i++) {
+        tr = table.insertRow(-1);
+        for (let j = 0; j < col.length; j++) {
+          let tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = myBooks[i][col[j]];
+        }
+      }
+      // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+      let divContainer = document.getElementById("showTable");
+      //divContainer.innerHTML = "";
+      divContainer.appendChild(table);
+    }
+  </script>
+</head>
+<body>
+  <div id="main" class="standard_div">
+    <h1 id="h1" class="test">DOM Example - Inner HTML H1</h1>
+    <p id="p1">Some Text in a paragraph P1</p>
+    <p id="p2">... and even more text ... P2</p>
+  </div>
+  <div id="container" class="standard_div">
+    <p>div CONTAINER</p>
+    <p id="p_remove">I am ready to be removed P_REMOVE</p>
+  </div>
+  <div id="buttonBar" class="btn-group">
+    <button class="button" onclick="changeHeading()">Change H1 Content</button>
+    <button class="button" onclick="changeColor()">Change P1 color</button>
+    <button class="button" onclick="changeClass()">Change class of P2</button>
+    <button class="button" onclick="addElement()">Add Element to div CONTAINER</button>
+    <button class="button" onclick="removeElement()">Remove Element P_REMOVE</button>
+    <button class="button" onclick="createTableFromJSON()">Create Table</button>
+  </div>
+  <div id="listenEventsDemo" class="standard_div">
+    <h1> Event Listener Example </h1>
+    <button id="myBtn">Test</button>
+    <p id="event"></p><br><br>
+  </div>
+  <div id="showTable" class="standard_div">
+    <p>Table created from JSON Array goes here:</p>
+  </div>
+  <script>
+    // ADD EVENT LISTENER AND SOME FUNCTIONS TO HANDLE THE EVENTS
+    var x = document.getElementById("myBtn");
+    x.addEventListener("mouseover", myMouseOver);
+    x.addEventListener("click", myClick);
+    x.addEventListener("mouseout", myMouseOut);
+
+    function myMouseOver() {
+      document.getElementById("event").innerHTML += "Mouse over!<br>";
+    }
+    function myClick() {
+      document.getElementById("event").innerHTML += "Clicked!<br>";
+    }
+    function myMouseOut() {
+      document.getElementById("event").innerHTML += "Moused out!<br>";
+    }
+  </script>
+</body>
+</html>
