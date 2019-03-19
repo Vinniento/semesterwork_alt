@@ -39,7 +39,8 @@
   <main class="column middle" name="Haupt" id="Haupt">
     
     <?php
-    //entweder if....... oder die inhalte von main.inc.php werden angezeigt
+    //nach dem man sich einlogged, erscheint links oben der button "log out". im file log out wird dem button den content "logout" zugewiesen.
+    //Nach der eckigen klammer von content wird der content (logout) eingefügt und die datei wird geöffnet. 
       if (isset($_REQUEST['content'])){
         include($_REQUEST['content'].".inc.php");
       }

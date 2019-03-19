@@ -1,4 +1,4 @@
-  <a href="index.php?content=login">Log In</a>
+    <a href="index.php?content=login">Log In</a>
     <a href="team.html" target="Haupt">Team</a>
     <a href="about.html" target="Haupt">About</a>
     <a href="CSS_Responsive Form.html" target="Haupt">Rate???</a>
