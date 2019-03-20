@@ -49,7 +49,9 @@
         include('main.inc.php');
       }
     ?>
-
+    
+    
+    // Wie bekommt man das weg? Nur bei Index.php da, ansonsten nicht mehr da
     <h2 id="whoareyou">Rate as...</h2>
       <p>die Nav bar sollte sich in der Haupt section öffnen...das sollte aber mit JavaScript funktionieren</p>
       
@@ -61,14 +63,6 @@
     <input list="university">
     <datalist id="university" name="university">
     <option value = "FH Campus Wien">
-    <option value = "FH Technikum Wien">
-    <option value = "Technische Universität Wien">
-    <option value = "---">
-    </datalist>
-    
-    <input list="chosenuniversity">
-    <datalist id="chosenuniversity" name="chosenuniversity">
-    <option value = "Computer Science and Digital Communications">
     <option value = "FH Technikum Wien">
     <option value = "Technische Universität Wien">
     <option value = "---">

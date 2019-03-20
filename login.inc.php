@@ -4,6 +4,12 @@
   <input type="text" id="username" name="username" required><br><br> 
   <label for="pwd">Password:</label>  
   <input type="password"  id="pwd" name="password" required><br><br>
+  <div id="buttonchooseperson" class="btn-group" style="text-align: center">
+  <label>Student</label>
+  <input type="radio" value="student" name="chooseperson" id="studentradio">
+  <label>Teacher</label>
+  <input type="radio" value="teacher" name="chooseperson" id="teacherradio">
+  </div>
   <input type="submit" value="Login">
   <input type="hidden" name="content" value="validate">
 </form>
