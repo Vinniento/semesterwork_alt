@@ -1,9 +1,8 @@
-    <a href="index.php?content=login">Log In</a>
+    <a href="index.php?content=login">Login</a>
     <a href="team.html" target="Haupt">Team</a>
-    <a href="about.html" target="Haupt">About</a>
-    <a href="CSS_Responsive Form.html" target="Haupt">Rate???</a>
+    <a href="about.html" target="Haupt">About our Project</a>
     <a href="buttonexample.html" target="Haupt">ButtonExample</a>
-    <a href="index.html" target="Haupt">Home</a>
+    <a href="index.php" target="Haupt">Home</a>
   
 
   

@@ -50,7 +50,7 @@
       }
     ?>
 
-    <h2 id="whoareyou">I am...</h2>
+    <h2 id="whoareyou">Rate as...</h2>
       <p>die Nav bar sollte sich in der Haupt section öffnen...das sollte aber mit JavaScript funktionieren</p>
       
       <div id="buttonBar" class="btn-group" style="text-align: center">
