@@ -1,6 +1,5 @@
 <?php
-  //LogOut the user by unsetting the sesison cookie
+  //unset session ID, session still active though??
   unset($_SESSION['login']);
   header("Location: index.php");
 ?>
-  

@@ -1,0 +1,1 @@
+<a href="logout.php" class="w3-bar-item w3-button w3-wide">Logout</a>

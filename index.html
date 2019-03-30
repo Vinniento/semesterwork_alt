@@ -1,10 +1,3 @@
-
-<?php 
-  include "connect_db.php";
-  session_start();
-
-?>
-
 <!DOCTYPE html>
 <html>
 <title>Rate Presentations</title>
@@ -38,41 +31,13 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-
-  
-  <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
- 
- <!-- Red bar on top: is connection established? -->
-  <p class ="w3-center w3-red"> <?php
-  
-  if (!$conn) {
-    echo 'Connection Error ' .mysqli_connect_error();
-  }
-  else {
-
-    echo "Connection established";
-  }?> </p>
-
-
-    <!-- Right-sided navbar Links -->
+    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-
-      <?php 
-        if(isset($_SESSION['login'])){
-         // echo $_SESSION['login'];
-      ?>
-
-      <a href="logout.php" class="w3-bar-item w3-button"><i clas ="fa fa-usd"></i>Logout</a>
-
-  <?php } else { ?>
-    
       <a href="#login" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Login</a>
-
-  <?php }; ?>
-
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -99,8 +64,7 @@ body, html {
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
     <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today  <?php echo 'session status = '.  session_status(); ?>
-    </a></p>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
   </div> 
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -111,30 +75,6 @@ body, html {
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
 </header>
-
-<!-- login Section -->
-<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="login">
-<!-- sends data to the file "login.php" -->
-<form action="login.php" method="GET">
-  <label for="username">Username:</label> 
-  <input type="text" id="username" name="username" value ="testuser" required><br><br> 
-  <label for="pwd">Password:</label>  
-  <input type="password"  id="pwd" name="password" value ="nlkj" required><br><br>
-  <div id="buttonchooseperson" class="btn-group" style="text-align: center">
-  <label>Student</label>
-  <input type="radio" value="student" name="chooseperson" id="studentradio">
-  <label>Teacher</label>
-  <input type="radio" value="teacher" name="chooseperson" id="teacherradio">
-  </div>
-  <input type="submit" value="submit">
-
-  <input type="hidden" name="submit" value="validate">
-</form>
-</div>
-
-<div id="newacc" class="btn-newacc" style="text-align: left">
-<button class="button" onclick="changeHeading()">Create new Account for Teachers here</button>
-</div>
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
@@ -321,7 +261,62 @@ body, html {
     </div>
   </div>
 </div>
-  
+
+<!-- login Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="login">
+  <h3>Login</h3>
+  <p class="w3-large">Choose a login plan that fits your needs.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16"><b>10GB</b> Storage</li>
+        <li class="w3-padding-16"><b>10</b> Emails</li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 10</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
+        <li class="w3-padding-16"><b>25GB</b> Storage</li>
+        <li class="w3-padding-16"><b>25</b> Emails</li>
+        <li class="w3-padding-16"><b>25</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 25</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+        <li class="w3-padding-16"><b>50GB</b> Storage</li>
+        <li class="w3-padding-16"><b>50</b> Emails</li>
+        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 50</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
@@ -332,7 +327,7 @@ body, html {
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     <br>
-    <form action="/action_page." target="_blank">
+    <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
