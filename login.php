@@ -1,6 +1,18 @@
 <?php 
+session_start();
+$conn = mysqli_connect('localhost', 'oliver', 'nlkj', 'webtech');
+  
+  
+/* write Query to get username and pwd of all users */
+$sql = "SELECT username, pwd FROM users WHERE username =  '".$_GET['username']."' ";
 
-  include "connect_db.php";
+/* Actually make the query */
+$data = mysqli_query($conn,$sql);
+
+//make data into an associative array so we can use it
+$users = mysqli_fetch_all($data, MYSQLI_ASSOC);
+
+
 
   //checking if form is sent
 /* beim $_GET wird "name" geholt, nicht "value"! */
@@ -13,24 +25,27 @@ $passwordform = $_GET['password'];
 
 echo $usernameform . "\n"; 
 echo $passwordform;
-$_SESSION_Status = session_status();
-     //disabled = 0, none = 1, active = 2 
-      echo 'status = ' . $_SESSION_Status;
+
 foreach($users as $user) {
 
 /*   $u = $user['username'] === $usernameform && $user['pwd'] === $passwordform ?  true : false ;*/
 
 
    if($user['username'] === $usernameform && $user['pwd'] === $passwordform) {
-    $_SESSION['login'] = $usernameform;
-    print_r($_SESSION);
-    //header("location: index.php");
-   exit();
+    $_SESSION['login'] = $user['username'];
+    
+     //disabled = 0, NULL = 1, active = 2 
+      echo '    Session status = ' . session_status();
+     print_r($_SESSION);
+     echo ' -- right login --';
+      header("location: index.php");
+     
 
    }
     else {
-      header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/SemesterWork1/#login");
-      exit();
+      echo ' -- wrong login --';
+      //header("Location: /semesterwork/#login");
+      
     }
     
   
