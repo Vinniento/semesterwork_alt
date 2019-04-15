@@ -13,10 +13,14 @@ include "header.php";
  
  
   <div style="text-align: center">
-  <label>Student</label>
+  <label>
   <input type="radio" value="student" name="chooseperson" id="studentradio">
-  <label>Teacher</label>
+  <span>Student</span>
+  </label>
+  <label>
   <input type="radio" value="teacher" name="chooseperson" id="teacherradio">
+  <span>Teacher</span>
+  </label>
   </div>
   <input type="submit" value="Login">
   <input type="hidden" name="submit" value="validate">

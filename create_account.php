@@ -18,10 +18,14 @@ include "header.php";
   <input type="password"  id="password" name="pwd" required><br><br>
   <label for="password1">Password again:</label>
   <input type="password"  id="password1" name="pwd1" required><br><br>
-  <label>Student</label>
+  <label>
   <input type="radio" value="student" name="chooseperson" id="studentradio">
-  <label>Teacher</label>
+  <span>Student</span>
+  </label>
+  <label>
   <input type="radio" value="teacher" name="chooseperson" id="teacherradio">
+  <span>Teacher</span>
+  </label>
   <input type="submit" value="Create Account">
   <input type="hidden" name="submit" value="validate">
 </form>
