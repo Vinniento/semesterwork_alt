@@ -8,8 +8,8 @@ include "header.php";
 <form action="login_check.php" method="post">
   <label for="username">Username:</label> 
   <input type="text" id="username" name="username" value= "testuser" required><br><br> 
-  <label for="pwd">Password:</label>  
-  <input type="password"  id="pwd" name="password" value= "nlkj" required><br><br>
+  <label for="password">Password:</label>  
+  <input type="password"  id="password" name="pwd" value= "nlkj" required><br><br>
  
  
   <div style="text-align: center">

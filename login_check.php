@@ -1,7 +1,7 @@
 <?php
 session_start();
-$user_form = htmlspecialchars($_POST['username']);
-$pass_form = sha1(htmlspecialchars($_POST['password']));
+$user_form = ($_POST['username']);
+$pass_form = htmlspecialchars($_POST['pwd']);
 
 try{
     //create connection to database
@@ -16,30 +16,35 @@ try{
         }
         else {
             //prepare helps against SQL injections
-            $query = "SELECT firstname, password FROM users WHERE firstname = :firstname AND password = :password";
-            $statement = $conn->prepare($query);    
+            $query = "SELECT id,firstname,pwd FROM users WHERE firstname = :firstname";
+            $statement = $conn->prepare($query);
+
             $statement->bindParam(':firstname', $user_form);
-            $statement->bindParam(':password', $pass_form);
+
             $statement->execute();
 
             //gets row as associative array
             $users = $statement->fetch(PDO::FETCH_ASSOC);
+           
             
-            if ($user_form === $users['firstname'] && $pass_form === $users['password']){
+            if ($user_form === $users['firstname'] && password_verify($pass_form, $users['pwd']) == true){
 
-                $_SESSION['firstname'] = $user_form;
+                $_SESSION['username'] = $user_form;
                 $_SESSION['pwd'] = $pass_form;
                 print_r($_SESSION);
 
                 echo "login successful";
-                
+                echo "\n pass db = " . $users['pwd'];
+               echo "\n pass form = " . $pass_form;  
                 header("location: index.php");
             }
+        
             else {
 /*                 eigentlich zum login page weiterleiten mit einer warnung wäre cool
 entweder ein zeichen "wrong login data" oder sowas */ 
-               echo ("wrong data!");    
-            }   
+               header("Location: login.php");  
+            }
+          
         }    
     }
 }

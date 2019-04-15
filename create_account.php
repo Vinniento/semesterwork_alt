@@ -14,10 +14,10 @@ include "header.php";
   <input type="email"  id="email" name="email" required><br><br>
   <label for="institution">Institution/University</label>  
   <input type="text"  id="institution" name="institution" required><br><br>
-  <label for="pwd">Password:</label>  
-  <input type="password"  id="pwd" name="pwd" required><br><br>
-  <label for="pwd1">Password again:</label>
-  <input type="password"  id="pwd1" name="pwd1" required><br><br>
+  <label for="password">Password:</label>  
+  <input type="password"  id="password" name="pwd" required><br><br>
+  <label for="password1">Password again:</label>
+  <input type="password"  id="password1" name="pwd1" required><br><br>
   <label>Student</label>
   <input type="radio" value="student" name="chooseperson" id="studentradio">
   <label>Teacher</label>

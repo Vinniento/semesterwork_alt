@@ -5,7 +5,7 @@ $institution = $_POST['institution'];
 $email = $_POST['email'];
 
 if($_POST['pwd'] == $_POST['pwd1']){
-$pwd = sha1(htmlspecialchars($_POST['pwd'])); }
+$pwd = password_hash((htmlspecialchars($_POST['pwd'])), PASSWORD_BCRYPT); }
 
 else{
     echo "pwd falsch!";
@@ -26,7 +26,7 @@ try {
     `lastname` VARCHAR(50) NOT NULL , 
     `institution` VARCHAR(50) NOT NULL , 
     `email` VARCHAR(50) NOT NULL , 
-    `password` BINARY(50) NOT NULL , 
+    `pwd` VARCHAR(255) NOT NULL , 
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
 
 
@@ -40,8 +40,8 @@ catch(PDOException $exception)
  }
 
  
-$statement = $conn->prepare("INSERT INTO users (firstname, lastname, institution, email, password) VALUES (:firstname, :lastname, :institution, :email, :password)");
-$statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'institution' => $institution, 'email' => $email, 'password' => $pwd));   
+$statement = $conn->prepare("INSERT INTO users (firstname, lastname, institution, email, pwd) VALUES (:firstname, :lastname, :institution, :email, :pwd)");
+$statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'institution' => $institution, 'email' => $email, 'pwd' => $pwd));   
 
 
 ?>
