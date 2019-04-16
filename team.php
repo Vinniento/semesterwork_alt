@@ -29,9 +29,9 @@ include "header.php";
                     <img src="happyface.png">
                 </div>
                 <div class="card-stacked">
-                    <p>Daniel Ziegler</p>
+                    <p>Schauer Vincent</p>
                     <br>
-                    <p>Responsible for the design</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -45,9 +45,9 @@ include "header.php";
                     <img src="happyface.png">
                 </div>
                 <div class="card-stacked">
-                    <p>Daniel Ziegler</p>
+                    <p>Vorlen Christoph </p>
                     <br>
-                    <p>Responsible for the design</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -61,9 +61,9 @@ include "header.php";
                     <img src="happyface.png">
                 </div>
                 <div class="card-stacked">
-                    <p>Daniel Ziegler</p>
+                    <p>Ullrich Felix</p>
                     <br>
-                    <p>Responsible for the design</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -77,9 +77,9 @@ include "header.php";
                     <img src="happyface.png">
                 </div>
                 <div class="card-stacked">
-                    <p>Daniel Ziegler</p>
+                    <p>Thiess Lucas</p>
                     <br>
-                    <p>Responsible for the design</p>
+                    <p></p>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ include "header.php";
 
 ?>
 
-<div>
+<div >
 <form action="login_check.php" method="post">
   <label for="username">Username:</label> 
   <input type="text" id="username" name="username" value= "testuser" required><br><br> 
@@ -14,12 +14,7 @@ include "header.php";
  
   <div style="text-align: center">
   <label>
-  <input type="radio" value="student" name="chooseperson" id="studentradio">
-  <span>Student</span>
-  </label>
-  <label>
-  <input type="radio" value="teacher" name="chooseperson" id="teacherradio">
-  <span>Teacher</span>
+  
   </label>
   </div>
   <input type="submit" value="Login">

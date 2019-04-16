@@ -26,6 +26,7 @@ include "header.php";
   <input type="radio" value="teacher" name="chooseperson" id="teacherradio">
   <span>Teacher</span>
   </label>
+  <br>
   <input type="submit" value="Create Account">
   <input type="hidden" name="submit" value="validate">
 </form>
