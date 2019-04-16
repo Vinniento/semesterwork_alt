@@ -46,12 +46,18 @@ session_start();
         <li><a href="logout.php">Logout</a></li>   
 
         <?php if($_SESSION['isteacher']===TRUE):?>
-		<li><a href="createpresentation.php">Create Presentation</a></li>
-		<? else: ?>
-		<li><a href="vewrating.php">view your rating</a></li>
-		<? else: ?>
+		<li><a href="create.php">Create Presentation</a></li>
+		<?php else: ?>
+		<li><a href="view.php">view your rating</a></li>
+		<?php
+		endif;
+		else: 
+		?>
             <li><a href="login.php">Login</a></li> 
         <?php endif; ?>  
+		
+		
+		
 
       </ul>
   </div>  
