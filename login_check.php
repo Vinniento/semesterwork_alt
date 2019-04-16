@@ -16,7 +16,7 @@ try{
         }
         else {
             //prepare helps against SQL injections
-            $query = "SELECT id,firstname,pwd FROM users WHERE firstname = :firstname";
+            $query = "SELECT id,firstname,pwd, isteacher FROM users WHERE firstname = :firstname";
             $statement = $conn->prepare($query);
 
             $statement->bindParam(':firstname', $user_form);
@@ -36,7 +36,8 @@ try{
 
                 echo "login successful";
                 echo "\n pass db = " . $users['pwd'];
-               echo "\n pass form = " . $pass_form;  
+               echo "\n pass form = " . $pass_form;
+
                 header("location: index.php");
             }
         

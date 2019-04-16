@@ -49,7 +49,7 @@ catch(PDOException $exception)
  }
 
  
-$statement = $conn->prepare("INSERT INTO users (firstname, lastname, institution, email, pwd) VALUES (:firstname, :lastname, :institution, :email, :pwd)");
+$statement = $conn->prepare("INSERT INTO users (firstname, lastname, institution, email, pwd, isteacher) VALUES (:firstname, :lastname, :institution, :email, :pwd, :isteacher)");
 $statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'institution' => $institution, 'email' => $email, 'pwd' => $pwd,'isteacher' => $isteacher));   
 
 
