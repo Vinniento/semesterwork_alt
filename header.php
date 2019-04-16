@@ -45,7 +45,11 @@ session_start();
         <?php if(isset($_SESSION['username']) && isset($_SESSION['pwd'])): ?>
         <li><a href="logout.php">Logout</a></li>   
 
-        <?php else: ?>
+        <?php if($_SESSION['isteacher']===TRUE):?>
+		<li><a href="createpresentation.php">Create Presentation</a></li>
+		<? else: ?>
+		<li><a href="vewrating.php">view your rating</a></li>
+		<? else: ?>
             <li><a href="login.php">Login</a></li> 
         <?php endif; ?>  
 

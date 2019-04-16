@@ -31,6 +31,7 @@ try{
 
                 $_SESSION['username'] = $user_form;
                 $_SESSION['pwd'] = $pass_form;
+			    $_SESSION['isteacher']=$users['isteacher'];
                 print_r($_SESSION);
 
                 echo "login successful";
