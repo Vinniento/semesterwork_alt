@@ -33,7 +33,7 @@ try {
     `firstname` VARCHAR(50) NOT NULL , 
     `lastname` VARCHAR(50) NOT NULL , 
     `institution` VARCHAR(50) NOT NULL , 
-    `email` VARCHAR(50) NOT NULL , 
+    `email` VARCHAR(50) NOT NULL UNIQUE , 
     `pwd` VARCHAR(255) NOT NULL ,
 	`isteacher` boolean NOT NULL,
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
