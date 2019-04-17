@@ -18,52 +18,44 @@ function getName($n) {
 
 
 
-$name=$_POST['name'];
+$name=$_POST['namel'];
 $criterion1 =NULL;
-if(isset($_POST['criterion 1'])
-{
+if(isset($_POST['criterion 1'])){
 $criterion1 =$_POST['criterion 1'];
 }
 
 $criterion2 =NULL;
-if(isset($_POST['criterion 2'])
-{
+if(isset($_POST['criterion 2'])){
 $criterion2 =$_POST['criterion 2'];
 }
 
 $criterion3 =NULL;
-if(isset($_POST['criterion 3'])
-{
+if(isset($_POST['criterion 3'])){
 $criterion3 =$_POST['criterion 3'];
 }
 
 $criterion4 =NULL;
-if(isset($_POST['criterion 4'])
-{
+if(isset($_POST['criterion 4'])){
 $criterion4 =$_POST['criterion 4'];
 }
 
 $criterion5 =NULL;
-if(isset($_POST['criterion 5'])
-{
+if(isset($_POST['criterion 5'])){
 $criterion5 =$_POST['criterion 5'];
 }
 
 $criterion6 =NULL;
-if(isset($_POST['criterion 6'])
-{
+if(isset($_POST['criterion 6'])){
 $criterion6 =$_POST['criterion 6'];
 }
 
 $criterion7 =NULL;
-if(isset($_POST['criterion 7'])
-{
+if(isset($_POST['criterion 7'])){
 $criterion7 =$_POST['criterion 7'];
 }
 
 $criterion8 =NULL;
-if(isset($_POST['criterion 8'])
-{
+if(isset($_POST['criterion 8'])){
 $criterion8 =$_POST['criterion 8'];
 }
 
