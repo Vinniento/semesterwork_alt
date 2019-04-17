@@ -54,4 +54,17 @@ $statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'i
 
 
 ?>
+<?php
+
+include "header.php";
+
+?>
+
+Acount created
+
+<?php
+
+include "footer.php";
+
+?>
 

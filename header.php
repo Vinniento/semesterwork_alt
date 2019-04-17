@@ -47,6 +47,7 @@ session_start();
 
         <?php if($_SESSION['isteacher']==TRUE):?>
 		<li><a href="create.php">Create Presentation</a></li>
+		<li><a href="mod.php">modify Presentation</a></li>
 		<?php else: ?>
 		<li><a href="view.php">view your rating</a></li>
 		<?php
