@@ -3,10 +3,13 @@
 include "header.php";
 
 ?>
+
 <div >
-<form action="create_check.php" method="post">
-<label for="name">name of the presention:</label> 
-  <input type="text"  name="name" value= "name" required><br>
+<form action="create_check.php" method="POST">
+
+<label for="name">name of the presention: </label> 
+  <input type="text"  name="presi_name" value= "presi_name" required><br>
+
 <label for="criterion 1"> criterion 1 :</label> 
   <input type="text"  name="criterion 1" value= "none" ><br>
   
@@ -31,14 +34,15 @@ include "header.php";
   <label for="criterion 8"> criterion 8 :</label>   
   <input type="text"  name="criterion 8" value= "none" ><br>
 
-
+  <input type="submit" value="Create" >
+  <input type="hidden" name="submit" value="validate">
 </form>
 </div>
 
 
 
-<div style="text-align: center">
-<a href="create_check.php"><button>Create new Presentation</button> </a>
+<!-- <div style="text-align: center">
+<a href="create_check.php"><button>Create new Presentation</button> </a> -->
 </div>
 
 

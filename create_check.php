@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //von https://www.geeksforgeeks.org/generating-random-string-using-php/
 function getName($n) { 
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
@@ -18,7 +18,8 @@ function getName($n) {
 
 
 
-$name=$_POST['namel'];
+$name = $_POST['presi_name'];
+
 $criterion1 =NULL;
 if(isset($_POST['criterion 1'])){
 $criterion1 =$_POST['criterion 1'];
@@ -72,27 +73,27 @@ try {
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
     `name` VARCHAR(50) NOT NULL UNIQUE  , 
     `zuggriffcode` VARCHAR(50) NOT NULL UNIQUE, 
-    `creator` VARCHAR(50) NOT NULL 
+    `creator` VARCHAR(50) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
 
 
     // use exec() to create table because no results are returned
     $conn->exec($create);
-    echo "Table users created successfully";
+    echo "Table presentations created successfully";
  }
 catch(PDOException $exception)
  {
  echo $create . "<br>" . $exception->getMessage();
  }
  $n=5;
-$creator=$_SESSION['username'];
+$creator= $_SESSION['username'];
 $zuggriffcode= getName($n);
 
-$statement = $conn->prepare("INSERT INTO presentions (name, zuggriffcode, creator,) VALUES (:name, :lastname, :zuggriffcode, :creator)");
+$statement = $conn->prepare("INSERT INTO presentions (name, zuggriffcode, creator) VALUES (:name, :zuggriffcode, :creator)");
 $statement->execute(array('name' => $name, 'zuggriffcode' => $zuggriffcode, 'creator' => $creator));   
 
 try {
-	$nameuser=$name."users";
+	$nameuser= $name."users";
 	
     $create= "CREATE TABLE IF NOT EXISTS `webtech`.`". $nameuser ."` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
@@ -102,7 +103,7 @@ try {
 
     // use exec() to create table because no results are returned
     $conn->exec($create);
-    echo "Table users created successfully";
+    echo "Table nameuser created successfully";
  }
 catch(PDOException $exception)
  {
