@@ -23,46 +23,56 @@ function getName($n) {
 
 $name = $_POST['presi_name'];
 
-$criterion1 ="NA";
-if(isset($_POST['criterion 1'])){
-$criterion1 =$_POST['criterion 1'];
+$criterion1 =$_POST['criterion1'];
+$criterion2 =$_POST['criterion2'];
+$criterion3 =$_POST['criterion3'];
+$criterion4 =$_POST['criterion4'];
+$criterion5 =$_POST['criterion5'];
+$criterion6 =$_POST['criterion6'];
+$criterion7 =$_POST['criterion7'];
+$criterion8 =$_POST['criterion8'];
+
+/*
+$criterion1 ="NA1";
+if(isset($_POST['criterion1'])){
+$criterion1 =$_POST['criterion1'];
 }
 
-$criterion2 ="NA";
-if(isset($_POST['criterion 2'])){
-$criterion2 =$_POST['criterion 2'];
+$criterion2 ="NA2";
+if(isset($_POST['criterion2'])){
+$criterion2 =$_POST['criterion2'];
 }
 
-$criterion3 ="NA";
-if(isset($_POST['criterion 3'])){
-$criterion3 =$_POST['criterion 3'];
+$criterion3 ="NA3";
+if(isset($_POST['criterion3'])){
+$criterion3 =$_POST['criterion3'];
 }
 
-$criterion4 ="NA";
-if(isset($_POST['criterion 4'])){
-$criterion4 =$_POST['criterion 4'];
+$criterion4 ="NA4";
+if(isset($_POST['criterion4'])){
+$criterion4 =$_POST['criterion4'];
 }
 
-$criterion5 ="NA";
-if(isset($_POST['criterion 5'])){
-$criterion5 =$_POST['criterion 5'];
+$criterion5 ="NA5";
+if(isset($_POST['criterion5'])){
+$criterion5 =$_POST['criterion5'];
 }
 
-$criterion6 ="NA";
-if(isset($_POST['criterion 6'])){
-$criterion6 =$_POST['criterion 6'];
+$criterion6 ="NA6";
+if(isset($_POST['criterion6'])){
+$criterion6 =$_POST['criterion6'];
 }
 
-$criterion7 ="NA";
-if(isset($_POST['criterion 7'])){
-$criterion7 =$_POST['criterion 7'];
+$criterion7 ="NA7";
+if(isset($_POST['criterion7'])){
+$criterion7 =$_POST['criterion7'];
 }
 
-$criterion8 ="NA";
-if(isset($_POST['criterion 8'])){
-$criterion8 =$_POST['criterion 8'];
+$criterion8 ="NA8";
+if(isset($_POST['criterion8'])){
+$criterion8 =$_POST['criterion8'];
 }
-
+*/
 
 
 try {
@@ -114,7 +124,7 @@ catch(PDOException $exception)
  }
  
 try {	
-	
+	 echo "<br>tablle 3:<br>";
     $create= "CREATE TABLE IF NOT EXISTS `webtech`.`". $name ."` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
     `".$criterion1."` int NOT NULL   , 
