@@ -1,5 +1,8 @@
 <?php
-session_start();
+include "header.php";
+?>
+<?php
+
 //von https://www.geeksforgeeks.org/generating-random-string-using-php/
 function getName($n) { 
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
@@ -20,42 +23,42 @@ function getName($n) {
 
 $name = $_POST['presi_name'];
 
-$criterion1 =NULL;
+$criterion1 ="NA";
 if(isset($_POST['criterion 1'])){
 $criterion1 =$_POST['criterion 1'];
 }
 
-$criterion2 =NULL;
+$criterion2 ="NA";
 if(isset($_POST['criterion 2'])){
 $criterion2 =$_POST['criterion 2'];
 }
 
-$criterion3 =NULL;
+$criterion3 ="NA";
 if(isset($_POST['criterion 3'])){
 $criterion3 =$_POST['criterion 3'];
 }
 
-$criterion4 =NULL;
+$criterion4 ="NA";
 if(isset($_POST['criterion 4'])){
 $criterion4 =$_POST['criterion 4'];
 }
 
-$criterion5 =NULL;
+$criterion5 ="NA";
 if(isset($_POST['criterion 5'])){
 $criterion5 =$_POST['criterion 5'];
 }
 
-$criterion6 =NULL;
+$criterion6 ="NA";
 if(isset($_POST['criterion 6'])){
 $criterion6 =$_POST['criterion 6'];
 }
 
-$criterion7 =NULL;
+$criterion7 ="NA";
 if(isset($_POST['criterion 7'])){
 $criterion7 =$_POST['criterion 7'];
 }
 
-$criterion8 =NULL;
+$criterion8 ="NA";
 if(isset($_POST['criterion 8'])){
 $criterion8 =$_POST['criterion 8'];
 }
@@ -114,14 +117,14 @@ try {
 	
     $create= "CREATE TABLE IF NOT EXISTS `webtech`.`". $name ."` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
-    `".$criterion1."user` int NOT NULL   , 
-	`".$criterion2."user` int NOT NULL   , 
-	`".$criterion3."user` int NOT NULL   , 
-	`".$criterion4."user` int NOT NULL   , 
-	`".$criterion5."user` int NOT NULL   , 
-	`".$criterion6."user` int NOT NULL   , 
-	`".$criterion7."user` int NOT NULL   , 
-	`".$criterion8."user` int NOT NULL   , 
+    `".$criterion1."` int NOT NULL   , 
+	`".$criterion2."` int NOT NULL   , 
+	`".$criterion3."` int NOT NULL   , 
+	`".$criterion4."` int NOT NULL   , 
+	`".$criterion5."` int NOT NULL   , 
+	`".$criterion6."` int NOT NULL   , 
+	`".$criterion7."` int NOT NULL   , 
+	`".$criterion8."` int NOT NULL   , 
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
 
 
@@ -157,9 +160,7 @@ catch(PDOException $exception)
 
 
 ?>
-<?php
-include "header.php";
-?>
+
 <a href="addstudent.php"><button>Add Student to Presentation</button> </a>
 <?php
 include "footer.php";
