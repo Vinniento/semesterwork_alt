@@ -22,8 +22,8 @@ function getName($n) {
 
 
 $name = $_POST['presi_name'];
-
-$criterion1 =$_POST['criterion1'];
+/*
+$criterion1 =$_POST['criterion1'];criterion1
 $criterion2 =$_POST['criterion2'];
 $criterion3 =$_POST['criterion3'];
 $criterion4 =$_POST['criterion4'];
@@ -31,8 +31,8 @@ $criterion5 =$_POST['criterion5'];
 $criterion6 =$_POST['criterion6'];
 $criterion7 =$_POST['criterion7'];
 $criterion8 =$_POST['criterion8'];
+*/
 
-/*
 $criterion1 ="NA1";
 if(isset($_POST['criterion1'])){
 $criterion1 =$_POST['criterion1'];
@@ -72,7 +72,7 @@ $criterion8 ="NA8";
 if(isset($_POST['criterion8'])){
 $criterion8 =$_POST['criterion8'];
 }
-*/
+
 
 
 try {
