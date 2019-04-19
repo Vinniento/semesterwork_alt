@@ -31,14 +31,17 @@ try{
 
                 $_SESSION['username'] = $user_form;
                 $_SESSION['pwd'] = $pass_form;
-			    $_SESSION['isteacher']=$users['isteacher'];
-                print_r($_SESSION);
+			    $_SESSION['isteacher'] = $users['isteacher'];
+                //print_r($_SESSION);
 
-                echo "login successful";
+               /*  echo "login successful";
                 echo "\n pass db = " . $users['pwd'];
-               echo "\n pass form = " . $pass_form;
-
-                header("location: index.php");
+               echo "\n pass form = " . $pass_form; */
+                if($users['isteacher']) {
+                header("location: teacher.php"); }
+                else {
+                    header("location: students.php");
+                }
             }
         
             else {

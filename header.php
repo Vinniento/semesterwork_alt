@@ -46,11 +46,12 @@ session_start();
         <li><a href="logout.php">Logout</a></li>   
 
         <?php if($_SESSION['isteacher']==TRUE):?>
-		<li><a href="create.php">Create Presentation</a></li>
+		<li><a href="teacher.php" class ="btn-floating grey darken-4 z-depth-3 center " ><i class="material-icons">account_circle</i></a></li>
 		<li><a href="mod.php">modify Presentation</a></li>
-		<?php else: ?>
-		<li><a href="view.php">view your rating</a></li>
-		<?php
+
+    <?php else: ?>
+    <li><a href="students.php" class ="btn-floating yellow darken-4 z-depth-3 center " ><i class="material-icons">account_circle</i></a></li>
+    <?php
 		endif;
 		else: 
 		?>

@@ -85,7 +85,7 @@ try {
     $create= "CREATE TABLE IF NOT EXISTS `webtech`.`presentions` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
     `name` VARCHAR(50) NOT NULL UNIQUE  , 
-    `zuggriffcode` VARCHAR(50) NOT NULL UNIQUE, 
+    `zugriffcode` VARCHAR(50) NOT NULL UNIQUE, 
     `creator` VARCHAR(50) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
 
@@ -100,10 +100,10 @@ catch(PDOException $exception)
  }
  $n=5;
 $creator= $_SESSION['username'];
-$zuggriffcode= getName($n);
+$zugriffcode= getName($n);
 
-$statement = $conn->prepare("INSERT INTO presentions (name, zuggriffcode, creator) VALUES (:name, :zuggriffcode, :creator)");
-$statement->execute(array('name' => $name, 'zuggriffcode' => $zuggriffcode, 'creator' => $creator));   
+$statement = $conn->prepare("INSERT INTO presentions (name, zugriffcode, creator) VALUES (:name, :zugriffcode, :creator)");
+$statement->execute(array('name' => $name, 'zugriffcode' => $zugriffcode, 'creator' => $creator));   
 
 try {
 	$nameuser= $name."users";
@@ -146,28 +146,6 @@ catch(PDOException $exception)
  {
  echo $create . "<br>" . $exception->getMessage();
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
 

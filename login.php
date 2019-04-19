@@ -18,7 +18,7 @@ include "header.php";
   </label>
   </div>
   <input type="submit" value="Login">
-  <input type="hidden" name="submit" value="validate">
+  <input type="hidden" name="submit" value="validate"> <!-- Wofür die zeile und nicht einfach in der drüber den namen einbauen -->
 </form>
 </div>
 
