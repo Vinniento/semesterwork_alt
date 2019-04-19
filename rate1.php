@@ -39,72 +39,15 @@
   </div>  
 </nav>
 
+<!-- survey-->
 
-<div class="row">
-  <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
-  </div>
-  <div class="col s12 m8 l8">
-    <form action="#">
-      <p class="range-field">
-        <input type="range" id="test5" min="0" max="10" />
-      </p>
-    </form>
-  </div>
-</div>
+<!--<div class="container">-->          
+    <div id="ratingElement"></div>
+    <div id="ratingResult"></div>
+<!--</div>-->
 
-<div class="row">
-  <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
-  </div>
-  <div class="col s12 m8 l8">
-    <form action="#">
-      <p class="range-field">
-        <input type="range" id="test5" min="0" max="10" />
-      </p>
-    </form>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
-  </div>
-  <div class="col s12 m8 l8">
-    <form action="#">
-      <p class="range-field">
-        <input type="range" id="test5" min="0" max="10" />
-      </p>
-    </form>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
-  </div>
-  <div class="col s12 m8 l8">
-    <form action="#">
-      <p class="range-field">
-        <input type="range" id="test5" min="0" max="10" />
-      </p>
-    </form>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
-  </div>
-  <div class="col s12 m8 l8">
-    <form action="#">
-      <p class="range-field">
-        <input type="range" id="test5" min="0" max="10" />
-      </p>
-    </form>
-  </div>
-</div>
-
+<script type="text/javascript" src="./index.js"></script>
 
 <footer class="footer indigo darken-4">
   <div class="row no-margin no-margin-bottom">
@@ -140,6 +83,22 @@
     $(document).ready(function(){
         $('.parallax').parallax();
     });
+</script>
+<script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('.scrollspy').scrollSpy();
+	});
+</script>
+</script>
+<script>
+  $('#Code').val('Enter Code here!');
+  M.textareaAutoResize($('#Code'));
+</script>
+<script>
+$(function() {
+    Materialize.updateTextFields();
+});
 </script>
 </body>
 </html>
