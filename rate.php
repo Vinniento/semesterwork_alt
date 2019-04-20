@@ -10,9 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="rules.css">
   <script src="https://unpkg.com/jquery"></script>
-  <script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
-  <!--<link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>-->
-  <link rel="stylesheet" href="survey.css">
   <title>Index-RatePresentations</title>
   <html lang="de">
   <meta charset="utf-8">
@@ -40,9 +37,25 @@
 </nav>
 
 
-<div class="row">
+<div class="container">
+  <header>
+    <br><h3 class="header center-align">Give your Rating</h3>
+    <h5 class="header center-align">(1 is worst and 10 is best)</h5><br>
+  </header>
+
+  <div class="row">
+    <div class="col s6">
+      <header><h5 class="header">As a Group:</h5></header>
+    </div>
+    <div class="col s6 grey lighten-1">Hier kommt der jeweilige Gruppenname der zu bewertenden Gruppe hin. (soll von selbst entstehen)</div>
+  </div>
+
+<br><hr>
+<header><br><h5 class="header center-align">Content and Structure</h5><br><br></header>
+
+<div class="row grey lighten-4">
   <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
+    <p>Introduction</p>
   </div>
   <div class="col s12 m8 l8">
     <form action="#">
@@ -53,9 +66,9 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row grey lighten-4">
   <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
+    <p>Gave an Overview?</p>
   </div>
   <div class="col s12 m8 l8">
     <form action="#">
@@ -66,9 +79,9 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row grey lighten-4">
   <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
+    <p>Structure of the Presentation itself</p>
   </div>
   <div class="col s12 m8 l8">
     <form action="#">
@@ -79,9 +92,9 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row grey lighten-4">
   <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
+    <p>Content</p>
   </div>
   <div class="col s12 m8 l8">
     <form action="#">
@@ -92,9 +105,9 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row grey lighten-4">
   <div class="col s12 m4 l4">
-    <p>Frage 1:</p>
+    <p>Conclusion</p>
   </div>
   <div class="col s12 m8 l8">
     <form action="#">
@@ -105,6 +118,233 @@
   </div>
 </div>
 
+<br><hr>
+<header><br><h5 class="header center-align">Visualization</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Visualization</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<br><hr>
+<header><br><h5 class="header center-align">Teamwork</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Acted as a team</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Preparation by the team</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Audience felt necessity to participate</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<br><hr>
+<header><br><h5 class="header center-align">Additional Feedback for the group: (optional)</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1">Additional Feedback</label>
+      </div>
+    </div>
+  </form>
+</div>
+
+<br>
+<div class="row">
+  <div class="col s12 grey lighten-1">Fragebogen von indivduellem Feedback soll automatisch erstellt werden (entweder nach Anzahl von Teammitgliedern richten, oder random 2 Bögen erstellen, damit die Seite nicht zu lange wird)
+  </div>
+</div>
+<header><br><h5 class="header center-align">Individual Feedback for Group Members</h5><br><br></header>
+<br>
+
+<div class="row grey lighten-4">
+    <div class="col s6">
+      <header><h5 class="header">Group Member:</h5></header>
+    </div>
+    <div class="col s6 grey lighten-1">Hier kommt der jeweilige Vor- und Nachname der zu bewertenden Person hin. (soll von selbst entstehen)</div>
+</div>
+<br><hr>
+<header><br><h5 class="header center-align">Language</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Articulation</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Talking Speed</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Pronunciation</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Competence</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<br><hr>
+<header><br><h5 class="header center-align">Body Language</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Presence</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Eye Contact</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Posture</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Gesture</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<br><hr>
+<header><br><h5 class="header center-align">Preparation</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <div class="col s12 m4 l4">
+    <p>Preparation</p>
+  </div>
+  <div class="col s12 m8 l8">
+    <form action="#">
+      <p class="range-field">
+        <input type="range" id="test5" min="0" max="10" />
+      </p>
+    </form>
+  </div>
+</div>
+
+<br><hr>
+<header><br><h5 class="header center-align">Additional Feedback for a groupmember: (optional)</h5><br><br></header>
+
+<div class="row grey lighten-4">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="textarea2" class="materialize-textarea"></textarea>
+        <label for="textarea2">Additional Feedback</label>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
 
 <footer class="footer indigo darken-4">
   <div class="row no-margin no-margin-bottom">
