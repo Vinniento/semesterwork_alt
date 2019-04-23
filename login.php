@@ -13,8 +13,7 @@ include "header.php";
   <input type="password"  id="password" name="pwd" value= "nlkj" required><br><br>
   
   <div>
-  <button class="btn waves-effect waves-light" type="submit" value="Login">Login</button>
-  <input type="hidden" name="submit" value="validate"> <!-- Wofür die zeile und nicht einfach in der drüber den namen einbauen -->
+  <button class="btn waves-effect waves-light" type="submit" name="submit" value="Login">Login</button>
   </div>
 
 </form>

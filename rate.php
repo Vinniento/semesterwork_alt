@@ -53,16 +53,17 @@
 <br><hr>
 <header><br><h5 class="header center-align">Content and Structure</h5><br><br></header>
 
+
+<form action="rate_check.php" method="post">
 <div class="row grey lighten-4">
   <div class="col s12 m4 l4">
     <p>Introduction</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
+    <form>
       <p class="range-field">
-        <input type="range" id="test5" min="0" max="10" />
+        <input type="range" name="intro" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -71,11 +72,9 @@
     <p>Gave an Overview?</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -84,11 +83,9 @@
     <p>Structure of the Presentation itself</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -97,11 +94,9 @@
     <p>Content</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -110,13 +105,14 @@
     <p>Conclusion</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
+
+
+
 
 <br><hr>
 <header><br><h5 class="header center-align">Visualization</h5><br><br></header>
@@ -126,11 +122,9 @@
     <p>Visualization</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -142,11 +136,9 @@
     <p>Acted as a team</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -155,11 +147,9 @@
     <p>Preparation by the team</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -168,11 +158,9 @@
     <p>Audience felt necessity to participate</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -180,14 +168,12 @@
 <header><br><h5 class="header center-align">Additional Feedback for the group: (optional)</h5><br><br></header>
 
 <div class="row grey lighten-4">
-  <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
         <textarea id="textarea1" class="materialize-textarea"></textarea>
         <label for="textarea1">Additional Feedback</label>
       </div>
     </div>
-  </form>
 </div>
 
 <br>
@@ -212,11 +198,9 @@
     <p>Articulation</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -225,11 +209,9 @@
     <p>Talking Speed</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -238,11 +220,9 @@
     <p>Pronunciation</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -251,11 +231,9 @@
     <p>Competence</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -267,11 +245,9 @@
     <p>Presence</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -280,11 +256,9 @@
     <p>Eye Contact</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -293,11 +267,9 @@
     <p>Posture</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -306,11 +278,9 @@
     <p>Gesture</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -322,11 +292,9 @@
     <p>Preparation</p>
   </div>
   <div class="col s12 m8 l8">
-    <form action="#">
       <p class="range-field">
         <input type="range" id="test5" min="0" max="10" />
       </p>
-    </form>
   </div>
 </div>
 
@@ -334,17 +302,21 @@
 <header><br><h5 class="header center-align">Additional Feedback for a groupmember: (optional)</h5><br><br></header>
 
 <div class="row grey lighten-4">
-  <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
         <textarea id="textarea2" class="materialize-textarea"></textarea>
         <label for="textarea2">Additional Feedback</label>
       </div>
     </div>
-  </form>
 </div>
 </div>
 </div>
+
+<button class="btn waves-effect waves-light" type="submit" value="Submit Rating">Submit Rating</button>
+<input type="hidden" name="submit" value="validate"> <!-- Wofür die zeile und nicht einfach in der drüber den namen einbauen -->
+</form>
+
+
 
 <footer class="footer indigo darken-4">
   <div class="row no-margin no-margin-bottom">
