@@ -9,6 +9,7 @@ session_start();
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="w3school.css">
   <link rel="stylesheet" href="rules.css">
   <title>Index-RatePresentations</title>
   <html lang="de">
@@ -47,7 +48,7 @@ session_start();
 
         <?php if($_SESSION['isteacher']==TRUE):?>
 		<li><a href="teacher.php" class ="btn-floating grey darken-4 z-depth-3 center " ><i class="material-icons">account_circle</i></a></li>
-		<li><a href="mod.php">modify Presentation</a></li>
+	
 
     <?php else: ?>
     <li><a href="students.php" class ="btn-floating yellow darken-4 z-depth-3 center " ><i class="material-icons">account_circle</i></a></li>
@@ -71,25 +72,24 @@ session_start();
   <br><br>
   <?php  $link = $_SERVER['REQUEST_URI'];
 
-   if($link === "/semesterwork3/login.php"): ?> 
+   if($link === "/semesterwork/login.php"): ?> 
     <h2 class="header center">Please Login</h2>
 
-    <?php elseif($link === "/semesterwork3/index.php"):?>
+    <?php elseif($link === "/semesterwork/index.php"):?>
       <h2 class="header center">Rate Presentations</h2>
 
-   <?php elseif($link === "/semesterwork3/index.php"):?>
+   <?php elseif($link === "/semesterwork/index.php"):?>
     <h2 class="header center">Our Team</h2>
 
-   <?php elseif($link === "/semesterwork3/about.php"):?>
+   <?php elseif($link === "/semesterwork/about.php"):?>
     <h2 class="header center">About this Project</h2>
 
-   <?php elseif($link === "/semesterwork3/team.php"):?>
+   <?php elseif($link === "/semesterwork/team.php"):?>
     <h2 class="header center">Team</h2>
 
    <?php endif;?>
 
       <div class="row center">
-  <br><br>
     <div class="parallax"><img src="parallax4.jpg">
     </div>
   </div>
