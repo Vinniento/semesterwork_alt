@@ -18,7 +18,6 @@ $name = $_POST['presi_name'];
 $id_students = $_POST['id_students'];
 
 
-
 try {
 
     $conn = new PDO("mysql:host=localhost; dbname=webtech", "oliver", "nlkj");

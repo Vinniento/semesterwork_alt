@@ -76,7 +76,7 @@ if (isset($_POST['submit_rating_code'])) {
       <div class="col s12 m8 l8">
         <form>
           <p class="range-field">
-            <input type="range" name="intro" id="test5" min="0" max="10" />
+            <input type="range" name="intro" min="0" max="10" />
           </p>
       </div>
     </div>
@@ -87,7 +87,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="overview" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -98,7 +98,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="structure" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -109,7 +109,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="content" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -120,7 +120,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="conclusion" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -140,7 +140,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="visualization" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -157,7 +157,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="acted_as_team" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -168,7 +168,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="preperation_team" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -179,7 +179,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="necessity_participate" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -190,6 +190,7 @@ if (isset($_POST['submit_rating_code'])) {
       <h5 class="header center-align">Additional Feedback for the group: (optional)</h5><br><br>
     </header>
 
+    <!-- textfeld übergabe name fehlt -->
     <div class="row grey lighten-4">
       <div class="row">
         <div class="input-field col s12">
@@ -229,7 +230,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="articulation" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -240,7 +241,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="talking_speed" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -251,7 +252,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name="pronunciation" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -262,7 +263,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="competence" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -279,7 +280,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="body_language" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -290,7 +291,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="eye_contact" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -301,7 +302,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range"name ="posture" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -312,7 +313,7 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="gesture" min="0" max="10" />
         </p>
       </div>
     </div>
@@ -329,13 +330,15 @@ if (isset($_POST['submit_rating_code'])) {
       </div>
       <div class="col s12 m8 l8">
         <p class="range-field">
-          <input type="range" id="test5" min="0" max="10" />
+          <input type="range" name ="preperation_individual" min="0" max="10" />
         </p>
       </div>
     </div>
 
     <br>
     <hr>
+
+    <!-- name für übergabe noch hinzufügen -->
     <header><br>
       <h5 class="header center-align">Additional Feedback for a groupmember: (optional)</h5><br><br>
     </header>
@@ -351,8 +354,7 @@ if (isset($_POST['submit_rating_code'])) {
 </div>
 </div>
 
-<button class="btn waves-effect waves-light" type="submit" value="Submit Rating">Submit Rating</button>
-<input type="hidden" name="submit" value="validate"> <!-- Wofür die zeile und nicht einfach in der drüber den namen einbauen -->
+<button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit Rating">Submit Rating</button>
 </form>
 
 
