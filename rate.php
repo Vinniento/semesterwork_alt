@@ -22,13 +22,13 @@
   <div class="container">  
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="index2.php" target="Haupt"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="index.php" target="Haupt"><i class="material-icons left">home</i>Home</a></li>
         <li><a href="team.php" target="Haupt"><i class="material-icons left">people</i>Team</a></li>
         <li><a href="about.php" target="Haupt">About our Project</a></li>
       </ul>
     <a href="#" class="center-align">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index2.php" target="Haupt"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="index.php" target="Haupt"><i class="material-icons left">home</i>Home</a></li>
         <li><a href="team.php" target="Haupt"><i class="material-icons left">people</i>Team</a></li>
         <li><a href="about.php" target="Haupt">About our Project</a></li>
         <li><a href="index.php?content=login">Login</a></li>   
