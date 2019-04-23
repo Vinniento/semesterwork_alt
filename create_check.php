@@ -1,21 +1,21 @@
 <?php
 include "header.php";
 
+function randcode($n)
+{
+    $chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+    $randomString = '';
 
-function randcode($n) { 
-    $chars= '0123456789abcdefghijklmnopqrstuvwxyz'; 
-    $randomString = ''; 
-  
-    for ($i = 0; $i < $n; $i++) { 
-        $j = rand(0, strlen($chars) - 1); 
-        $randomString .= $chars[$j]; 
-    } 
-  
-    return $randomString; 
-} 
+    for ($i = 0; $i < $n; $i++) {
+        $j = rand(0, strlen($chars) - 1);
+        $randomString .= $chars[$j];
+    }
+
+    return $randomString;
+}
 
 $name = $_POST['presi_name'];
-$id_Students = $_POST['id_students'];
+$id_students = $_POST['id_students'];
 
 
 
@@ -26,11 +26,11 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $create= "CREATE TABLE IF NOT EXISTS `webtech`.`presentations` 
+    $create = "CREATE TABLE IF NOT EXISTS `webtech`.`presentations` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
     `name` VARCHAR(50) NOT NULL UNIQUE  , 
 	`id_students` int NOT NULL UNIQUE  ,
-    `zugriffcode` VARCHAR(50) NOT NULL UNIQUE, 
+    `rating_code` VARCHAR(50) NOT NULL UNIQUE, 
     `creator` VARCHAR(50) NOT NULL ,
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
 
@@ -38,21 +38,19 @@ try {
     // use exec() to create table because no results are returned
     $conn->exec($create);
     echo "Table presentations created successfully";
- }
-catch(PDOException $exception)
- {
- echo $create . "<br>" . $exception->getMessage();
- }
- $n=5;
-$creator= $_SESSION['username'];
-$zugriffcode= randcode($n);
+} catch (PDOException $exception) {
+    echo $create . "<br>" . $exception->getMessage();
+}
+$n = 5;
+$creator = $_SESSION['username'];
+$rating_code = randcode($n);
 
-$statement = $conn->prepare("INSERT INTO presentions (name, zugriffcode, creator) VALUES (:name, :zugriffcode, :creator)");
-$statement->execute(array('name' => $name, 'id_Students' => $id_Students,'zugriffcode' => $zugriffcode, 'creator' => $creator));   
+$statement = $conn->prepare("INSERT INTO presentations (name, id_students, rating_code, creator) VALUES (:name, :id_students, :rating_code, :creator)");
+$statement->execute(array('name' => $name, 'id_students' => $id_students, 'rating_code' => $rating_code, 'creator' => $creator));
 
-try {	
-	 echo "<br>tablle 3:<br>";
-    $create= "CREATE TABLE IF NOT EXISTS `webtech`.`". $name ."` 
+try {
+    echo "<br>tablle 3:<br>";
+    $create = "CREATE TABLE IF NOT EXISTS `webtech`.`" . $name . "` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
     `indroduction` int NOT NULL   , 
 	`overview` int NOT NULL   , 
@@ -74,19 +72,17 @@ try {
 	`gesture` int NOT NULL   , 
 	`preperation_individual` int NOT NULL   , 
 	`feedback_individual` text NOT NULL   , 
+    `isteacher` boolean NOT NULL,
     PRIMARY KEY (`id`)) ENGINE = InnoDB";
 
 
     // use exec() to create table because no results are returned
     $conn->exec($create);
-    echo "Table users created successfully";
- }
-catch(PDOException $exception)
- {
- echo $create . "<br>" . $exception->getMessage();
- }
+    echo "Table criteria created successfully";
+} catch (PDOException $exception) {
+    echo $create . "<br>" . $exception->getMessage();
+}
 
 
 
 include "footer.php";
-?>

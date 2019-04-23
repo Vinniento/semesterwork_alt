@@ -9,7 +9,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $create= "CREATE TABLE IF NOT EXISTS `webtech`.`students` 
+    $create= "CREATE TABLE IF NOT EXISTS `webtech`.`userss` 
     ( `id` INT(30) NOT NULL AUTO_INCREMENT , 
     `firstname` VARCHAR(50) NOT NULL , 
     `lastname` VARCHAR(50) NOT NULL , 
@@ -19,7 +19,7 @@ try {
 
     // use exec() to create table because no results are returned
     $conn->exec($create);
-    echo "Table students created successfully";
+    echo "Table users created successfully";
  }
 catch(PDOException $exception)
  {
@@ -27,7 +27,7 @@ catch(PDOException $exception)
  }
 
  
-$statement = $conn->prepare("INSERT INTO students (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
+$statement = $conn->prepare("INSERT INTO users (firstname, lastname, email) VALUES (:firstname, :lastname, :email)");
 $statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'email' => $email));   
 
 
@@ -40,5 +40,3 @@ mail($email, $subject, $message, $headers);
 
 
 header("Location: teacher.php");
-?>
-
