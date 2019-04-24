@@ -54,7 +54,7 @@ entweder ein zeichen "wrong login data" oder sowas */
     }
 }
 
-catch(PDOException $error) {
-echo $error;
-}
+    catch(PDOException $error) {
+    echo $error;
+    }
 ?>
