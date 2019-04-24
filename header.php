@@ -38,7 +38,7 @@ session_start();
           <?php endif; ?>
 
         </ul>
-        <a href="#" class="center-align">Logo</a>
+        <a href="#" class="center-align">Rate Presentations</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.php"><i class="material-icons left">home</i>Home</a></li>
           <li><a href="team.php"><i class="material-icons left">people</i>Team</a></li>
