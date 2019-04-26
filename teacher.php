@@ -54,7 +54,6 @@ try {
 
     //updating and deleting json files
     /* https://www.kodingmadesimple.com/2017/05/add-update-delete-read-json-file-php.html */
-
 } catch (PDOException $error) {
     echo $error;
 }
@@ -62,19 +61,32 @@ try {
 
 ?>
 <script>
-
-
     function createTableFromJSON() {
         hideAll();
         document.getElementById('create_groups').style.display = "block";
         //entweder id ist falsch geplaced oder json file falsch geladen?
-        var students = [
-    {"firstname":"stud","lastname":"h"},
-    {"firstname":"vincent","lastname":"schauer"},
-    {"firstname":"hans","lastname":"mayer"},
-    {"firstname":"lucas","lastname":"bla"},
-    {"firstname":"lucas","lastname":"thiESS"}];
-        
+        var students = [{
+                "firstname": "stud",
+                "lastname": "h"
+            },
+            {
+                "firstname": "vincent",
+                "lastname": "schauer"
+            },
+            {
+                "firstname": "hans",
+                "lastname": "mayer"
+            },
+            {
+                "firstname": "lucas",
+                "lastname": "bla"
+            },
+            {
+                "firstname": "lucas",
+                "lastname": "thiESS"
+            }
+        ];
+
         // EXTRACT VALUE FOR HTML HEADER. 
         // ('Book ID', 'Book Name', 'Category' and 'Price')
         let col = [];
@@ -112,7 +124,7 @@ try {
         <input type="button" name="add_students" value="Add Students" onclick="showAddStudents()">
     </form>
     <br>
-    <input type="button" name="create_groups" value="Create Groups" onlick ="showCreateGroups()" onclick="createTableFromJSON()">
+    <input type="button" name="create_groups" value="Create Groups" onlick="showCreateGroups()" onclick="createTableFromJSON()">
     <br>
     <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()">
     <br>
@@ -159,13 +171,31 @@ try {
         </li>
     </ul>
 
+    <div class="container">
+        <form action="#">
+            <p>
+                <label>
+                    <span>Groupname:</span>
+                    <input type="text" name="groupname">
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Vorname, Nachname</span>
+                </label>
+            </p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </div>
+
 
 </div>
 
-<div class="container blue" id="rate_groups" style="display:none;">
+<div class="container blue darken-4" id="rate_groups" style="display:none;">
 
-    mit diesem Button wollen die erstellten Gruppen dargestellt haben --> mit Button um so als Lehrer eingeloggt genau diese (geklickte) Gruppe raten zu können. Ratingscode soll noch angezeigt werden in der form: Access Code: AAAAA
-
+    
 </div>
 
 <div class="container yellow" id="view_ratings" style="display:none;">
