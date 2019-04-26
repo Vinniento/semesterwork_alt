@@ -65,10 +65,15 @@ try {
 
 
     function createTableFromJSON() {
-
+        hideAll();
+        document.getElementById('create_groups').style.display = "block";
         //entweder id ist falsch geplaced oder json file falsch geladen?
-        var json = $.getJSON("students.json");
-        var students = JSON.parse(json);
+        var students = [
+    {"firstname":"stud","lastname":"h"},
+    {"firstname":"vincent","lastname":"schauer"},
+    {"firstname":"hans","lastname":"mayer"},
+    {"firstname":"lucas","lastname":"bla"},
+    {"firstname":"lucas","lastname":"thiESS"}];
         
         // EXTRACT VALUE FOR HTML HEADER. 
         // ('Book ID', 'Book Name', 'Category' and 'Price')
@@ -107,7 +112,7 @@ try {
         <input type="button" name="add_students" value="Add Students" onclick="showAddStudents()">
     </form>
     <br>
-    <input type="button" name="create_groups" value="Create Groups" onclick="createTableFromJSON()">
+    <input type="button" name="create_groups" value="Create Groups" onlick ="showCreateGroups()" onclick="createTableFromJSON()">
     <br>
     <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()">
     <br>
