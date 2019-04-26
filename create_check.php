@@ -1,6 +1,7 @@
 <?php
 include "header.php";
 
+
 function randcode($n)
 {
     $chars = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -85,3 +86,4 @@ try {
 
 
 include "footer.php";
+?>
