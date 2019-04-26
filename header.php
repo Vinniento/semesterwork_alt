@@ -42,7 +42,7 @@ session_start();
           <?php
         else :
           ?>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="login.php"><i class="material-icons left">subdirectory_arrow_right</i>Login</a></li>
           <?php endif; ?>
 
         </ul>
@@ -68,7 +68,7 @@ session_start();
           <?php
         else :
           ?>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="login.php"  class="valign-wrapper"><i class="material-icons left">subdirectory_arrow_right</i>Login</a></li>
           <?php endif; ?>
 
 
