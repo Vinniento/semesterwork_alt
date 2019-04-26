@@ -38,7 +38,7 @@ session_start();
           <?php
         endif;
         if (isset($_SESSION['username']) && isset($_SESSION['pwd'])) : ?>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="logout.php"><i class="material-icons left">power_settings_new</i>Logout</a></li>
           <?php
         else :
           ?>
@@ -48,9 +48,9 @@ session_start();
         </ul>
         <a href="#" class="center-align">Rate Presentations</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="index.php"><i class="material-icons left">home</i>Home</a></li>
-          <li><a href="team.php"><i class="material-icons left">people</i>Team</a></li>
-          <li><a href="about.php"><i class="material-icons left">web</i>About our Project</a></li>
+          <li><a href="index.php" class="valign-wrapper"><i class="material-icons left">home</i>Home</a></li>
+          <li><a href="team.php" class="valign-wrapper"><i class="material-icons left">people</i>Team</a></li>
+          <li><a href="about.php" class="valign-wrapper"><i class="material-icons left">web</i>About our Project</a></li>
 
 
 
@@ -63,7 +63,7 @@ session_start();
         endif;
 
         if (isset($_SESSION['username']) && isset($_SESSION['pwd'])) : ?>
-            <li><a href="logout.php" class="right">Logout</a></li>
+            <li><a href="logout.php" class="right valign-wrapper"><i class="material-icons left">power_settings_new</i>Logout</a></li>
 
           <?php
         else :
