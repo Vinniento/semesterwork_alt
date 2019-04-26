@@ -38,8 +38,12 @@ if (isset($_POST['submit'])) {
        $statement->execute();
        
 	   $tabelle = $statement->fetch(PDO::FETCH_ASSOC);
-	   $statement = $conn->prepare("INSERT INTO ".tabelle[name]." (name, id_students, rating_code, creator) VALUES (:name, :id_students, :rating_code, :creator)");
-	   $statement->execute(array('name' => $name, 'id_students' => $id_students, 'rating_code' => $rating_code, 'creator' => $creator));
+	   
+	   
+	   $isteacher=$_SESSION['isteacher'];
+	   
+	   $statement = $conn->prepare("INSERT INTO ".tabelle[name]." (indroduction , overview, structure, content,conclusion,visualization,work_as_team,preperation_team,necessity_participate,feedback_team,articulation,talking_speed,pronounciation,competence,presence,eye_contact,posture,gesture,preperation_individual,feedback_individual,isteacher) VALUES (:name, :id_students, :rating_code, :creator)");
+	   $statement->execute(array('indroduction' => $intro, 'overview' => $overview, 'structure' => $structure, 'content' => $content, 'conclusion' => $conclusion, 'visualization' => $visualization, 'work_as_team' => $work_as_team, 'preperation_team' => $preperation_team, 'necessity_participate' => $necessity_participate, 'feedback_team' => $feedback_team, 'articulation' => $articulation, 'talking_speed' => $talking_speed, 'pronounciation' => $pronounciation, 'competence' => $competence, 'presence' => $presence, 'eye_contact' => $eye_contact, 'posture' => $posture, 'gesture' => $gesture, 'preperation_individual' => $preperation_individual, 'feedback_individual' => $feedback_individual, 'isteacher' => $isteacher));
 	
 	
 	
