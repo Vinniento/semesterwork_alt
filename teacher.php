@@ -61,34 +61,53 @@ try {
 
 ?>
 <script>
+    //holt die daten aus der JSON datei
+    /*  function getdata() {
+
+        hideAll();
+        document.getElementById('create_groups').style.display = "block";
+
+        var xttp = new XMLHttpRequest();
+
+        xttp.onreadystatechange = function() {
+            
+            if (xttp.readyState == 4 && xttp.status == 200) {
+                var javaobj = JSON.stringify(xttp.response);
+                document.getElementById('create_groups').innerHTML = javaobj;
+            }
+        };
+        xttp.open("GET", "students.json", true);
+        xttp.send();
+    } */
+
+
     function createTableFromJSON() {
         hideAll();
         document.getElementById('create_groups').style.display = "block";
-        //entweder id ist falsch geplaced oder json file falsch geladen?
-        var students = [{
-                "firstname": "stud",
-                "lastname": "h"
-            },
-            {
-                "firstname": "vincent",
-                "lastname": "schauer"
-            },
-            {
-                "firstname": "hans",
-                "lastname": "mayer"
-            },
-            {
-                "firstname": "lucas",
-                "lastname": "bla"
-            },
-            {
-                "firstname": "lucas",
-                "lastname": "thiESS"
-            }
-        ];
-
         // EXTRACT VALUE FOR HTML HEADER. 
         // ('Book ID', 'Book Name', 'Category' and 'Price')
+        var students = [{
+            "firstname": "stud",
+            "lastname": "h"
+        }, {
+            "firstname": "vincent",
+            "lastname": "schauer"
+        }, {
+            "firstname": "hans",
+            "lastname": "mayer"
+        }, {
+            "firstname": "lucas",
+            "lastname": "bla"
+        }, {
+            "firstname": "lucas",
+            "lastname": "thiESS"
+        }];
+
+
+/* https://www.experts-exchange.com/questions/23834901/Dynamically-adding-table-row-with-a-checkbox-using-javascript.html
+dynamically create checkboxes */
+
+var checkbox = document.createElement("INPUT");
         let col = [];
         for (let key in students[0]) {
             col.push(key);
@@ -101,6 +120,9 @@ try {
             let th = document.createElement("th"); // TABLE HEADER.
             th.innerHTML = col[i];
             tr.appendChild(th);
+            checkbox.type = "checkbox";
+
+            
         }
         // ADD JSON DATA TO THE TABLE AS ROWS.
         for (let i = 0; i < students.length; i++) {
@@ -124,7 +146,7 @@ try {
         <input type="button" name="add_students" value="Add Students" onclick="showAddStudents()">
     </form>
     <br>
-    <input type="button" name="create_groups" value="Create Groups" onlick="showCreateGroups()" onclick="createTableFromJSON()">
+    <input type="button" name="create_groups" value="Create Groups" onclick="createTableFromJSON()">
     <br>
     <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()">
     <br>
@@ -146,30 +168,8 @@ try {
     </form>
 </div>
 
-<div class="container green" id="create_groups" style="display:none;">
+<div class="container blue darken-4" id="create_groups" style="display:none;">
 
-
-
-    Tabelle mit Studenten die sich in Datenbank befinden -> hier darstellen, falls möglich siehe so wie collection unten dargestellt.
-    Diese Studenten müssen idealerweise mit Drag&Drop in Gruppen hinzugefügt werden (so wie es im Moodle ist).
-
-    Stellen wir uns ungefähr so vor:
-    Rechteck wo man die Students reinzieht, darüber gruppenname --> dann ein Button zum bestätigen. und nach dem bestätigen wird automatisch eine mail an die adresse der Studenten versendet.
-
-
-    <ul class="collection with-header">
-        <li class="collection-header">
-            <h4>Students</h4>
-        </li>
-        <li class="collection-item avatar">
-            <i class="material-icons circle blue">person</i>
-            <span class="title">First Name & Last Name</span>
-
-            <a href="" class="secondary-content">
-
-            </a>
-        </li>
-    </ul>
 
     <div class="container">
         <form action="#">
@@ -182,7 +182,7 @@ try {
 
             <p>
                 <label>
-                    <input type="checkbox" class="filled-in"/>
+                    <input type="checkbox" class="filled-in" />
                     <span>Vorname, Nachname</span>
                 </label>
             </p>
@@ -193,9 +193,10 @@ try {
 
 </div>
 
-<div class="container blue darken-4" id="rate_groups" style="display:none;">
+<div class="container blue" id="rate_groups" style="display:none;">
 
-    
+    mit diesem Button wollen die erstellten Gruppen dargestellt haben --> mit Button um so als Lehrer eingeloggt genau diese (geklickte) Gruppe raten zu können. Ratingscode soll noch angezeigt werden in der form: Access Code: AAAAA
+
 </div>
 
 <div class="container yellow" id="view_ratings" style="display:none;">
