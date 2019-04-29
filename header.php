@@ -28,7 +28,7 @@ session_start();
         <ul class="sidenav" id="mobile-demo">
           <li><a href="index.php"><i class="material-icons left">home</i>Home</a></li>
           <li><a href="team.html"><i class="material-icons left">people</i>Team</a></li>
-          <li><a href="about.html"><i class="material-icons left">web</i>About our Project</a></li>
+          <li><a href="about.html"><i class="material-icons left">web</i>Project</a></li>
 
           <?php if ($_SESSION['isteacher'] == TRUE) : ?>
             <li><a href="teacher.php"><i class="material-icons left">account_circle</i>Teacher Area</a></li>
@@ -50,7 +50,7 @@ session_start();
         <ul class="right hide-on-med-and-down">
           <li><a href="index.php" class="valign-wrapper"><i class="material-icons left">home</i>Home</a></li>
           <li><a href="team.php" class="valign-wrapper"><i class="material-icons left">people</i>Team</a></li>
-          <li><a href="about.php" class="valign-wrapper"><i class="material-icons left">web</i>About our Project</a></li>
+          <li><a href="about.php" class="valign-wrapper"><i class="material-icons left">web</i>Project</a></li>
 
 
 
