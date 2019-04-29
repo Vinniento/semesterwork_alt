@@ -87,6 +87,7 @@ if (isset($_POST['submit'])) {
 	   'isteacher' => $isteacher));
 	unset($_SESSION['code']);
 	echo "fertig";
+	header("Location: index.php");  
 	
 	}catch (PDOException $exception) 
 	{
