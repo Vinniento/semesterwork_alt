@@ -4,6 +4,14 @@ include "header.php";
 ?>
 
 
+<div id="buttonBar" class="btn-group">
+    <button class="button" onclick="changeRatings()">Add Number to Rating</button>
+  </div>
+
+
+
+
+
 <!--<div class="container">-->
     <div class="row">
         <div class="col s6 m6 l6 indigo lighten-4">
@@ -191,6 +199,21 @@ include "header.php";
                 </div>
     </div>
 <!--</div>-->
+
+
+
+
+
+<script>
+
+
+
+
+function changeRatings() {
+      let rating_content = document.getElementById("content_structure");
+      rating_content.innerHTML="5";
+    }
+</script>
 
 
 <?php
