@@ -1,22 +1,24 @@
 <?php
 include "header.php";
 
-
-if (isset($_POST['submit_rating_code'])) {
+ $_SESSION['code'] = $_POST['rating_code'];
+if (isset($_POST['rating_code'])) {
   try {
+	
 
     $conn = new PDO("mysql:host=localhost; dbname=webtech", "oliver", "nlkj");
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+    
 
     //nur fürs testen, bis wir die präsis anlegen können
+	
     $name = "test3344";
     $id_students = 4;
     $rating = $_POST['rating_code'];
-    $rating_code = "12345";
+    $rating_code = $_POST['rating_code'];
     $creator = "vince";
-
+/*
     $sql = "DELETE FROM presentations WHERE name = :name";
     $statement = $conn->prepare($sql);
     $statement->bindParam(':name', $name);
@@ -25,7 +27,7 @@ if (isset($_POST['submit_rating_code'])) {
 
     $statement = $conn->prepare("INSERT INTO presentations (name, id_students, rating_code, creator) VALUES (:name, :id_students, :rating_code, :creator)");
     $statement->execute(array('name' => $name, 'id_students' => $id_students, 'rating_code' => $rating_code, 'creator' => $creator));
-
+     */
     $query = "SELECT rating_code FROM presentations WHERE rating_code = :rating_code";
     $statement = $conn->prepare($query);
     $statement->bindParam(':rating_code', $rating_code);
