@@ -2,143 +2,71 @@
 
 include "header.php";
 
-
-/* function DumpTable($array_assoc)
-{
-    if (is_array($array_assoc)) {
-        echo '<table class="table">';
-        echo '<tr>';
-        list($table_title) = $array_assoc;
-        foreach ($table_title as $key => &$value) :
-            echo '<th>' . $key . '</th>';
-        endforeach;
-        echo '</tr>';
-
-        foreach ($array_assoc as &$master) :
-            echo '<tr>';
-            foreach ($master as &$slave) :
-                echo '<td>' . $slave . '</td>';
-            endforeach;
-            echo '</tr>';
-        endforeach;
-        echo '</table>';
-        return;
-    }
-}
- */
-
-try {
-    $conn = new PDO("mysql:host=localhost; dbname=webtech", "oliver", "nlkj");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $isteacher = false;
-
-    $query = "SELECT firstname, lastname FROM users WHERE isteacher = :isteacher";
-    $statement = $conn->prepare($query);
-
-    $statement->bindParam(':isteacher', $isteacher);
-
-    $statement->execute();
-
-    //gets row as associative array
-    $users = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-
-    $students = json_encode($users);
-
-    $handle = fopen("students.json", 'w+');
-
-    fwrite($handle, $students);
-
-    //close the file
-    fclose($handle);
-
-    //updating and deleting json files
-    /* https://www.kodingmadesimple.com/2017/05/add-update-delete-read-json-file-php.html */
-} catch (PDOException $error) {
-    echo $error;
-}
-
-
 ?>
+
 <script>
-    //holt die daten aus der JSON datei
-    /*  function getdata() {
-
-        hideAll();
-        document.getElementById('create_groups').style.display = "block";
-
-        var xttp = new XMLHttpRequest();
-
-        xttp.onreadystatechange = function() {
-            
-            if (xttp.readyState == 4 && xttp.status == 200) {
-                var javaobj = JSON.stringify(xttp.response);
-                document.getElementById('create_groups').innerHTML = javaobj;
-            }
-        };
-        xttp.open("GET", "students.json", true);
-        xttp.send();
-    } */
-
-
     function createTableFromJSON() {
         hideAll();
         document.getElementById('create_groups').style.display = "block";
-        // EXTRACT VALUE FOR HTML HEADER. 
-        // ('Book ID', 'Book Name', 'Category' and 'Price')
-        var students = [{
-            "firstname": "stud",
-            "lastname": "h"
-        }, {
-            "firstname": "vincent",
-            "lastname": "schauer"
-        }, {
-            "firstname": "hans",
-            "lastname": "mayer"
-        }, {
-            "firstname": "lucas",
-            "lastname": "bla"
-        }, {
-            "firstname": "lucas",
-            "lastname": "thiESS"
-        }];
+        let con = new XMLHttpRequest(); //Create Object
+        console.log("1");
+        con.open("GET", "teacher_check.php", true); //open the connection
+        con.onreadystatechange = function() { //define Callback function
+            if (con.readyState == 4 && con.status == 200) {
+                console.log("2");
+                console.log(this.responseText);
+                let response = this.responseText;
+                let students = JSON.parse(this.responseText); //Convert String back into JSON object
+                console.log(students);
+                let col = [];
+                for (let key in students[0]) {
+                    col.push(key);
+                }
 
+                // CREATE DYNAMIC TABLE.
+                let table = document.createElement("table");
 
-/* https://www.experts-exchange.com/questions/23834901/Dynamically-adding-table-row-with-a-checkbox-using-javascript.html
-dynamically create checkboxes */
+                // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+                let tr = table.insertRow(-1); // TABLE ROW AT THE END
+                let th = document.createElement("th");
+                th.innerHTML = "SELECT";
+                tr.appendChild(th);
+                for (let i = 0; i < col.length; i++) {
+                    let th = document.createElement("th"); // TABLE HEADER.
+                    th.innerHTML = col[i];
+                    tr.appendChild(th);
 
-var checkbox = document.createElement("INPUT");
-        let col = [];
-        for (let key in students[0]) {
-            col.push(key);
-        }
-        // CREATE DYNAMIC TABLE.
-        let table = document.createElement("table");
-        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-        let tr = table.insertRow(-1); // TABLE ROW AT THE END
-        for (let i = 0; i < col.length; i++) {
-            let th = document.createElement("th"); // TABLE HEADER.
-            th.innerHTML = col[i];
-            tr.appendChild(th);
-            checkbox.type = "checkbox";
+                }
 
-            
-        }
-        // ADD JSON DATA TO THE TABLE AS ROWS.
-        for (let i = 0; i < students.length; i++) {
-            tr = table.insertRow(-1);
-            for (let j = 0; j < col.length; j++) {
-                let tabCell = tr.insertCell(-1);
-                tabCell.innerHTML = students[i][col[j]];
+                // ADD JSON DATA TO THE TABLE AS ROWS.
+                for (let i = 0; i < students.length; i++) {
+                    tr = table.insertRow(-1);
+                    var checkbox = document.createElement('input');
+                    checkbox.type = "checkbox";
+                    checkbox.setAttribute("class", "filled-in checkbox-pink");
+                    
+                    console.log(students[i][col[0]]);
+                    
+                    tr.appendChild(checkbox);
+
+                    for (let j = 0; j < col.length; j++) {
+                        let tabCell = tr.insertCell(-1);
+                        tabCell.innerHTML = students[i][col[j]];
+                        
+                    }
+                }
+                // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+                let divContainer = document.getElementById("create_groups");
+                //divContainer.innerHTML = "";
+                divContainer.appendChild(table);
             }
+
         }
-        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        let divContainer = document.getElementById("create_groups");
-        //divContainer.innerHTML = "";
-        divContainer.appendChild(table);
+
+        con.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Set appropriate request Header
+        con.send(); //Request File Content
     }
 </script>
-
 
 
 <div class="container">
@@ -168,7 +96,7 @@ var checkbox = document.createElement("INPUT");
     </form>
 </div>
 
-<div class="container blue darken-4" id="create_groups" style="display:none;">
+<div class="container white darken-4" id="create_groups" style="display:none;">
 
 
     <div class="container">
