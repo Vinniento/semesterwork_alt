@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     $preperation_team = $_POST['preperation_team'];
     $necessity_participate = $_POST['necessity_participate'];
 
-    $feedback_team ="test"; //$_POST['intro'];
+    $feedback_team =$_POST['Additional_Feedback_theam'];
  
     $articulation = $_POST['articulation'];
     $talking_speed = $_POST['talking_speed'];
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
     $gesture = $_POST['gesture'];
     $preperation_individual = $_POST['preperation_individual'];
   
-     $feedback_individual = "test";//$_POST['intro'];
+     $feedback_individual = $_POST['Additional_Feedback'];
 	//$code=$_SESSION['code'];
 	try{
     //create connection to database

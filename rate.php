@@ -196,7 +196,7 @@ if (isset($_POST['rating_code'])) {
     <div class="row grey lighten-4">
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <textarea id="textarea1" name="Additional_Feedback_theam" class="materialize-textarea"></textarea>
           <label for="textarea1">Additional Feedback</label>
         </div>
       </div>
@@ -348,7 +348,7 @@ if (isset($_POST['rating_code'])) {
     <div class="row grey lighten-4">
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="textarea2" class="materialize-textarea"></textarea>
+          <textarea id="textarea2" name="Additional_Feedback" class="materialize-textarea"></textarea>
           <label for="textarea2">Additional Feedback</label>
         </div>
       </div>
