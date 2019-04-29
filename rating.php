@@ -22,7 +22,7 @@ include "header.php";
                     <h5><p class="center"><b>Content & Structure</b></p></h5>
                     </div>
                     <div class="col s12 m6 l6 center-align">
-                    <h5><p><span class="w3-badge w3-xlarge w3-black w3-padding" id="content_structure">1</span></p></h5>
+                    <h5><p><span class="w3-badge w3-xlarge w3-black w3-padding" id="content_structure"></span></p></h5>
                     </div>
                 </div>
                 <div class="row no-margin-bottom">
@@ -211,7 +211,7 @@ include "header.php";
 
 function changeRatings() {
       let rating_content = document.getElementById("content_structure");
-      rating_content.innerHTML="5";
+      rating_content.innerHTML="5.2";
     }
 </script>
 
