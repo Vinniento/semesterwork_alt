@@ -13,8 +13,8 @@ include "header.php";
                 </div>
                     <div class="card-stacked">
                     <p style="font-size: medium; margin-bottom: 0em; margin-top: 0.5em; margin-left: 1em" >Vincent Schauer</p>
-                    <p style="font-size: medium; margin-top: 0.5em; margin-left: 2em">description <br />
-                        description</p>
+                    <p style="font-size: small; margin-top: 0.5em; margin-left: 2em">Edmin. Der Größte im Team. <br />
+                        Hat sich sein Bild selbst ausgesucht. </p>
                     </div>
                 </div>
             </div>
@@ -28,8 +28,8 @@ include "header.php";
                     </div>
                     <div class="card-stacked">
                         <p style="margin-bottom: 0em; font-size: medium; margin-left: 1em">Lucas Thiess</p>
-                        <p style="font-size: small; margin-left: 2em">description <br />
-                            description</p>
+                        <p style="font-size: small; margin-left: 2em">Programmiermeister des Teams.<br />
+                            Weiß fast immer warum was nicht geht.</p>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,8 @@ include "header.php";
                 </div>
                 <div class="card-stacked">
                     <p style="margin-bottom: 0em; font-size: medium; margin-left: 1em">Felix Ullrich</p>
-                    <p style="font-size: small; margin-left: 2em">description <br />
-                        description</p>
+                    <p style="font-size: small; margin-left: 2em">Kennt sich überall ned so wirklich aus und<br />
+                        schnell abgelenkt. Dafür Patriot.</p>
                 </div>
             </div>
         </div>
@@ -58,8 +58,8 @@ include "header.php";
                 </div>
                 <div class="card-stacked">
                     <p style="font-size: medium; margin-bottom: 0em; margin-left: 1em">Christoph Vorlen</p>
-                    <p style="font-size: small; margin-left: 2em">description<br />
-                        description</p>
+                    <p style="font-size: small; margin-left: 2em">Hat gesagt Felix soll da was auf Englisch<br />
+                        schreiben, hat der nicht gemacht.</p>
                 </div>
             </div>
         </div>
@@ -73,8 +73,8 @@ include "header.php";
                 </div>
                 <div class="card-stacked">
                     <p style="font-size: medium; margin-bottom: 0em; margin-left: 1em">Daniel Ziegler</p>
-                    <p style="font-size: small; margin-left: 2em">description<br/>
-                        description</p>
+                    <p style="font-size: small; margin-left: 2em">Grafiker. Kennt sich mit Designs aus<br/>
+                        und lässts gut aussehen.</p>
                 </div>
             </div>
         </div>
