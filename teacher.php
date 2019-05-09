@@ -100,11 +100,11 @@ include "header.php";
 
 
     <div class="container">
-        <form action="#">
+        <form action="create_check.php" method="post">
             <p>
                 <label>
                     <span>Groupname:</span>
-                    <input type="text" name="groupname">
+                    <input type="text" name="groupname" required>
                 </label>
             </p>
 

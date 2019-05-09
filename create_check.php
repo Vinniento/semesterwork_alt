@@ -15,8 +15,8 @@ function randcode($n)
     return $randomString;
 }
 
-$name = $_POST['presi_name'];
-$id_students = $_POST['id_students'];
+$name = $_POST['groupname'];
+$id_students =randcode(5); //$_POST['id_students'];
 
 
 try {
