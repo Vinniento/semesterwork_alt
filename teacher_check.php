@@ -1,11 +1,12 @@
 <?php
 
+
 try {
     $conn = new PDO("mysql:host=localhost; dbname=webtech", "oliver", "nlkj");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $isteacher = false;
 
-    $query = "SELECT firstname, lastname FROM users WHERE isteacher = :isteacher";
+    $query = "SELECT firstname, lastname, id FROM users WHERE isteacher = :isteacher";
     $statement = $conn->prepare($query);
 
     $statement->bindParam(':isteacher', $isteacher);
@@ -22,3 +23,5 @@ try {
 } catch (PDOException $error) {
     echo $error;
 }
+
+

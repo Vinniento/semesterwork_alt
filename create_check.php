@@ -1,6 +1,9 @@
 <?php
 include "header.php";
 
+var_dump($_POST);
+
+print_r($_POST);
 
 function randcode($n)
 {

@@ -31,11 +31,10 @@ include "header.php";
                 let th = document.createElement("th");
                 th.innerHTML = "SELECT";
                 tr.appendChild(th);
-                for (let i = 0; i < col.length; i++) {
+                for (let i = 0; i < 2; i++) {
                     let th = document.createElement("th"); // TABLE HEADER.
                     th.innerHTML = col[i];
                     tr.appendChild(th);
-
                 }
 
                 // ADD JSON DATA TO THE TABLE AS ROWS.
@@ -43,16 +42,16 @@ include "header.php";
                     tr = table.insertRow(-1);
                     var checkbox = document.createElement('input');
                     checkbox.type = "checkbox";
-                    checkbox.setAttribute("class", "filled-in checkbox-pink");
-                    
+                   
+
                     console.log(students[i][col[0]]);
-                    
+
                     tr.appendChild(checkbox);
 
-                    for (let j = 0; j < col.length; j++) {
+                    for (let j = 0; j < 2; j++) {
                         let tabCell = tr.insertCell(-1);
                         tabCell.innerHTML = students[i][col[j]];
-                        
+                        checkbox.setAttribute('name', students[i][col[2]]);
                     }
                 }
                 // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
