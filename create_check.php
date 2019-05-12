@@ -1,9 +1,13 @@
 <?php
 include "header.php";
+$conn = new PDO("mysql:host=localhost; dbname=webtech", "oliver", "nlkj");
+$input = $_GET['hello'];
 
+echo $input;
+var_dump($_REQUEST);
 var_dump($_POST);
+var_dump($_GET);
 
-print_r($_POST);
 
 function randcode($n)
 {
@@ -19,7 +23,7 @@ function randcode($n)
 }
 
 $name = $_POST['groupname'];
-$id_students =randcode(5); //$_POST['id_students'];
+$id_students =randcode(20); //$_POST['id_students'];
 
 
 try {

@@ -42,7 +42,7 @@ include "header.php";
                     tr = table.insertRow(-1);
                     var checkbox = document.createElement('input');
                     checkbox.type = "checkbox";
-                   
+
 
                     console.log(students[i][col[0]]);
 
@@ -65,8 +65,30 @@ include "header.php";
         con.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //Set appropriate request Header
         con.send(); //Request File Content
     }
-</script>
 
+
+    function formSend() {
+
+        var data = $('form').serialize();
+        $.get('create_check.php', data);
+        window.location.replace = "create_check.php";
+
+        /* var inputValue = "hello="+"blub";
+        
+        let con = new XMLHttpRequest(); //Create Object (verbindungsaufbau)
+        con.open('post', 'create_check.php'); //open the connection
+        con.onreadystatechange = function() { //define Callback function
+            if (con.readyState === 4 && con.status === 200) { //4 -> server ist fertig
+                window.location.href = "create_check.php";
+
+            }
+
+        };
+        con.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        con.send(inputValue); */
+
+    }
+</script>
 
 <div class="container">
     <form action="teacher.php" method="post">
@@ -99,7 +121,7 @@ include "header.php";
 
 
     <div class="container">
-        <form action="create_check.php" method="post">
+        <form  id="form" method = "post">
             <p>
                 <label>
                     <span>Groupname:</span>
@@ -113,7 +135,7 @@ include "header.php";
                     <span>Vorname, Nachname</span>
                 </label>
             </p>
-            <p><input type="submit" value="Submit"></p>
+            <p><input type="submit" value="Submit" onclick="formSend()"></p>
         </form>
     </div>
 
