@@ -69,11 +69,8 @@ include "header.php";
 
     function formSend() {
 
-        var data = $('form').serialize();
-        $.get('create_check.php', data);
-        window.location.replace = "create_check.php";
 
-        /* var inputValue = "hello="+"blub";
+        var inputValue = "hello="+"blub";
         
         let con = new XMLHttpRequest(); //Create Object (verbindungsaufbau)
         con.open('post', 'create_check.php'); //open the connection
@@ -85,7 +82,7 @@ include "header.php";
 
         };
         con.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        con.send(inputValue); */
+        con.send(inputValue);
 
     }
 </script>
