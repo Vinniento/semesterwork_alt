@@ -8,7 +8,7 @@
     <div class="col s8 m6 l4 offset-s2 offset-m3 indigo-text text-lighten-4">
       <h5>Impressum</h5>
       <br>
-      <h6> © 2019 Copyright blablabla</h6>
+      <h6> © 2019 Copyright</h6>
     </div>
       <div class="col s8 m6 l4 offset-s2 offset-m3 indigo-text text-lighten-4">
       <h5>Links:</h5>
