@@ -32,7 +32,7 @@ $statement->execute(array('firstname' => $firstname, 'lastname' => $lastname, 'e
 
 
 $subject = 'project work';
-$message = 'Funny video to watch first: https://www.youtube.com/watch?v=8cfeTZNcA3g  Hier sollte der link stehen um das passwort zu erstellen, damit man sich in seinen account einloggen kann. p.s.: dadurch ist das create account für studenten hinfällig (so wie anfangs ausgemacht) lg edmins ';
+$message = 'You have been added as a student: please add your password following this link http://localhost:8081/semesterwork/add_password.php to set up your account';
 $headers = 'From: webmaster@example.com' . "\r\n" .
     'Reply-To: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
