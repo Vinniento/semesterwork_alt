@@ -66,17 +66,19 @@ include "header.php";
         con.send(); //Request File Content
     }
 
+    element.addEventListener("click", formSend());
 
     function formSend() {
 
+        var blub = "blub";
 
-        var inputValue = "hello="+"blub";
-        
+        var inputValue = 'hello=' + blub;
+
         let con = new XMLHttpRequest(); //Create Object (verbindungsaufbau)
-        con.open('post', 'create_check.php'); //open the connection
+        con.open('get', 'create_check.php'); //open the connection
         con.onreadystatechange = function() { //define Callback function
             if (con.readyState === 4 && con.status === 200) { //4 -> server ist fertig
-                window.location.href = "create_check.php";
+
 
             }
 
@@ -118,7 +120,7 @@ include "header.php";
 
 
     <div class="container">
-        <form  id="form" method = "post">
+        <form action="create_check.php" method="get">
             <p>
                 <label>
                     <span>Groupname:</span>

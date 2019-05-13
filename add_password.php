@@ -3,7 +3,7 @@ include "header.php";
 ?>
 
 <div class="container">
-    <h5>Hello, XXX XXX!</h5>
+    <h5>Hello,<?php echo " " . $_SESSION['username']; ?>!</h5>
     <p>Please add a password to your account:</p>
 <form action="login_check.php" method="post">
   <label for="password">Set Password:</label>  
