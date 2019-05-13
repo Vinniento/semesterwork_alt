@@ -134,7 +134,7 @@ include "header.php";
 <div class="container grey lighten-3" id="create_groups" style="display:none;">
     <div class="row">
         <div class="col s12 m6 l6 offset-m3 offset-l3">
-            <form action="create_check.php" method="get">
+            <form action="create_check.php" method="post">
             <p>
                 <label>
                     <span>Groupname:</span>
