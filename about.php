@@ -3,10 +3,10 @@
 ?>
 
 
-  <div class="row no-margin no-margin-bottom indigo darken-4">
-    <div class="col s1 m3 l2 hide-on-small"></div>
+  <div class="row no-margin-bottom indigo darken-4 valign-wrapper" style="height: 30em;">
+    <div class="col s1 m3 l2"></div>
     <div class="col s10 m6 l8 center-align white">
-      <br><br>
+      
       <p class="center">
       The goal of our project was to create a website that allows both students and teachers to give feedback to presentations of their colleagues.
       </p>
@@ -19,7 +19,7 @@
         <a href="maps.php">Location</a>
       </p>
     </div>
-    <div class="col s1 m3 l2 hide-on-small"></div>
+    <div class="col s1 m3 l2"></div>
   </div>
 
 

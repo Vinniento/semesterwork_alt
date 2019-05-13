@@ -3,11 +3,11 @@ include "header.php";
 
 ?>
 
-<div class="row indigo darken-4 no-margin no-margin-bottom" style="height: 24em;">
+<div class="row indigo darken-4 no-margin no-margin-bottom" style="height: 30em;">
   <div class="col s4 m4 l4 hide-on-small-only indigo darken-4"></div>
   <div class="col s8 m6 l4 offset-s2 offset-m3">
-    <br><br><br>
-
+    <br><br><br><br><br>
+    <div class="valign-wrapper">
     <form action="rate.php" method="post" class="col l12">
       <div class="card">
         <div class="card-content indigo lighten-4 center-align">
@@ -24,6 +24,7 @@ include "header.php";
         </div>
       </div>
     </form>
+    </div>
   </div>
   <div class="col s4 m4 l4 hide-on-small-only indigo darken-4"></div>
 </div>
