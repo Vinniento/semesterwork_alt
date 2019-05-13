@@ -90,16 +90,19 @@ include "header.php";
 </script>
 
 <div class="container">
+    <br>
     <form action="teacher.php" method="post">
-        <input type="button" name="add_students" value="Add Students" onclick="showAddStudents()">
+    <input type="button" name="add_students" value="Add Students" onclick="showAddStudents()" class="btn waves-effect waves-light">
     </form>
     <br>
-    <input type="button" name="create_groups" value="Create Groups" onclick="createTableFromJSON()">
-    <br>
-    <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()">
-    <br>
-    <input type="button" name="view_ratings" value="View Ratings" onclick="showViewRatings()">
+    <input type="button" name="create_groups" value="Create Groups" onclick="createTableFromJSON()" class="btn waves-effect waves-light">
+    <br><br>
+    <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()" class="btn waves-effect waves-light">
+    <br><br>
+    <input type="button" name="view_ratings" value="View Ratings" onclick="showViewRatings()" class="btn waves-effect waves-light">
+    <br><br>
     </form>
+    <br>
 </div>
 
 
