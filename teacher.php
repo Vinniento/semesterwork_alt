@@ -100,7 +100,7 @@ include "header.php";
     <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()" class="btn waves-effect waves-light">
     <br><br>
     <input type="button" name="view_ratings" value="View Ratings" onclick="showViewRatings()" class="btn waves-effect waves-light">
-    <br><br>
+    <br>
     </form>
     <br>
 </div>
