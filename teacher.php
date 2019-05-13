@@ -89,41 +89,52 @@ include "header.php";
     }
 </script>
 
-<div class="container">
-    <br>
+<br>
+<div class="container grey lighten-3" style="height: 8em;">
+<br>
     <form action="teacher.php" method="post">
-    <input type="button" name="add_students" value="Add Students" onclick="showAddStudents()" class="btn waves-effect waves-light">
+        <div class="row"><br>
+            <div class="col s12 m3 l3">
+                <button class="btn waves-effect waves-light" type="button" name="add_students" value="Add Students" onclick="showAddStudents()">Add Students</button>
+                <br><br>
+            </div>
+            <div class="col s12 m3 l3">
+                <button class="btn waves-effect waves-light" type="button" name="create_groups" value="Create Groups" onclick="createTableFromJSON()">Create Groups</button>
+                <br><br>
+            </div>
+            <div class="col s12 m3 l3">
+                <button class="btn waves-effect waves-light" type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()">Rate Groups</button>
+            <br><br>
+            </div>
+            <div class="col s12 m3 l3">
+                <button class="btn waves-effect waves-light" type="button" name="view_ratings" value="View Ratings" onclick="showViewRatings()">View Ratings</button>
+            </div>
+        </div>
     </form>
-    <br>
-    <input type="button" name="create_groups" value="Create Groups" onclick="createTableFromJSON()" class="btn waves-effect waves-light">
-    <br><br>
-    <input type="button" name="rate_groups" value="Rate Groups" onclick="showRateGroups()" class="btn waves-effect waves-light">
-    <br><br>
-    <input type="button" name="view_ratings" value="View Ratings" onclick="showViewRatings()" class="btn waves-effect waves-light">
-    <br>
-    </form>
-    <br>
+</div>
+<br>
+
+<div class="container grey lighten-3" id="add_students" style="display:none;">
+    <div class="row">
+        <div class="col s12 m6 l6 offset-m3 offset-l3"><br>
+            <form action="add_students.php" method="post">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required><br><br>
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+                <button class="btn waves-effect waves-light" type="submit" value="Create Student">Create Student</button>
+                <br><br>
+                <input type="hidden" name="content" value="validate">
+            </form>
+        </div>
+    </div>
 </div>
 
 
-
-
-<div class="container red" id="add_students" style="display:none;">
-    <form action="add_students.php" method="post">
-        <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" name="firstname" required><br><br>
-        <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" required><br><br>
-        <input type="submit" value="Create Student">
-        <input type="hidden" name="content" value="validate">
-    </form>
-</div>
-
-<div class="container white darken-4" id="create_groups" style="display:none;">
-
-
-    <div class="container">
-        <form action="create_check.php" method="get">
+<div class="container grey lighten-3" id="create_groups" style="display:none;">
+    <div class="row">
+        <div class="col s12 m6 l6 offset-m3 offset-l3">
+            <form action="create_check.php" method="get">
             <p>
                 <label>
                     <span>Groupname:</span>
@@ -137,11 +148,11 @@ include "header.php";
                     <span>Vorname, Nachname</span>
                 </label>
             </p>
-            <p><input type="submit" value="Submit" onclick="formSend()"></p>
+            <p><button class="btn waves-effect waves-light" type="submit" value="Submit" onclick="formSend()">Submit</button>
+            </p>
         </form>
+        </div>
     </div>
-
-
 </div>
 
 <div class="container blue" id="rate_groups" style="display:none;">
