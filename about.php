@@ -16,7 +16,7 @@
       <p>When feedback was given to an individual person, this person receives an email with a link that sends them back to our website, where they can view their feedback.
       </p>
       <p>And here you can see, where the most of the project was created</p>
-        <a href="maps.html">Location</a>
+        <a href="maps.php">Location</a>
       </p>
     </div>
     <div class="col s1 m3 l2 hide-on-small"></div>
