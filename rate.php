@@ -54,13 +54,13 @@ if (isset($_POST['rating_code'])) {
     <h5 class="header center-align">(1 is worst and 10 is best)</h5><br>
   </header>
 
-  <div class="row">
+  <div class="row grey lighten-4">
     <div class="col s6">
       <header>
         <h5 class="header">As a Group:</h5>
       </header>
     </div>
-    <div class="col s6 grey lighten-1">Hier kommt der jeweilige Gruppenname der zu bewertenden Gruppe hin. (soll von selbst entstehen)</div>
+    <h5 class="col s6 right-align">Group3_E</h5>
   </div>
 
   <br>
@@ -203,10 +203,6 @@ if (isset($_POST['rating_code'])) {
     </div>
 
     <br>
-    <div class="row">
-      <div class="col s12 grey lighten-1">Fragebogen von indivduellem Feedback soll automatisch erstellt werden (entweder nach Anzahl von Teammitgliedern richten, oder random 2 Bögen erstellen, damit die Seite nicht zu lange wird)
-      </div>
-    </div>
     <header><br>
       <h5 class="header center-align">Individual Feedback for Group Members</h5><br><br>
     </header>
@@ -218,7 +214,7 @@ if (isset($_POST['rating_code'])) {
           <h5 class="header">Group Member:</h5>
         </header>
       </div>
-      <div class="col s6 grey lighten-1">Hier kommt der jeweilige Vor- und Nachname der zu bewertenden Person hin. (soll von selbst entstehen)</div>
+      <h5 class="col s6 right-align">Vincent Schauer</h5>
     </div>
     <br>
     <hr>
@@ -356,7 +352,11 @@ if (isset($_POST['rating_code'])) {
 </div>
 </div>
 
-<button class="btn waves-effect waves-light" type="submit" name="submit" value="Submit Rating">Submit Rating</button>
+<br>
+<div class="center-align">
+<button class="btn waves-effect waves-light btn-large" type="submit" name="submit" value="Submit Rating">Submit Rating</button>
+</div>
+<br><br>
 </form>
 
 
