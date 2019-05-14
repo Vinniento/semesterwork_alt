@@ -9,6 +9,51 @@
 include "header.php";
 ?>
 
+
+<p>Get location</p>
+
+<button onclick="getLocation()" style="margin-left: 15%">Button</button>
+
+<p id="locationgetter"></p>
+
+<script>
+    var x = document.getElementById("locationgetter");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+                      "<br> Longitude: " + position.coords.longitude;
+    }
+
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+
+
+
+</script>
+
 <meta charset="UTF-8">
 
 <style>
@@ -30,19 +75,23 @@ include "header.php";
 
 <div id="map"></div>
 <script>
-    var map;
-    var fh = [
-        {"fh":"Location","coords":[48.158116, 16.382152]}
-    ];
+        var map;
+        var fh = [
+            {"fh": "LocationTest", "coords": [50.158116, 16.382152]}
+        ];
+        var fh2 = [
+            {"fh2": "LocTest2", "coords": [position.coords.latitude, 16.382152]}
+        ];
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             zoom: 6,
             center: new google.maps.LatLng(50, 15),
-            mapTypeId: 'hybrid'
+            mapTypeId: 'roadmap'
         });
 
         mashFh(fh);
+        mashFh(fh2);
     }
 
     function mashFh(results) {
