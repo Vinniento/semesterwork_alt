@@ -5,82 +5,100 @@ include "header.php";
 
 ?>
 
-  <div class="row indigo darken-4 no-margin no-margin-bottom">
-    <div class="container">
-        <div class="col s8 m6 l4 left-align">
-            <div class="card horizontal">
-                <div class="card-image"><img src="schauer.jpg" height="100"; width="80"; alt="image not available, ask edmin">
+
+
+
+<div class="row indigo grey lighten-3 no-margin no-margin-bottom">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5">
+            <div class="row valign-wrapper">
+                <div class="col s4 center-align">
+                    <img src="schauer.jpg" alt="" class="circle responsive-img">
                 </div>
-                    <div class="card-stacked">
-                    <p style="font-size: medium; margin-bottom: 0em; margin-top: 0.5em; margin-left: 1em" >Vincent Schauer</p>
-                    <p style="font-size: small; margin-top: 0.5em; margin-left: 2em">Edmin. Der Größte im Team. <br />
-                        Hat sich sein Bild selbst ausgesucht. </p>
-                    </div>
-                </div>
-            </div>
-    </div>
-  </div>
-    <div class="row indigo darken-4 no-margin no-margin-bottom">
-        <div class="container">
-            <div class="col s8 m6 l4 left-align">
-                <div class="card horizontal">
-                    <div class="card-image"><img src="jj.jpg" height="100"; width="80"; alt="image not available, ask admin">
-                    </div>
-                    <div class="card-stacked">
-                        <p style="margin-bottom: 0em; font-size: medium; margin-left: 1em; margin-top: 0.5em">Lucas Thiess</p>
-                        <p style="font-size: small; margin-left: 2em; margin-top: 0.5em">Programmiermeister des Teams.<br />
-                            Weiß fast immer warum was nicht geht.</p>
-                    </div>
+                <div class="col s8">
+                    <span class="black-text">
+                        <h5>Vincent Schauer</h5>
+                        <p>Der Motivator. Im Backend unterwegs und ist kein Freund von Javascript</p>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-  <div class="row indigo darken-4 no-margin no-margin-bottom">
-    <div class="container">
-        <div class="col s8 m6 l4 left-align">
-            <div class="card horizontal">
-                <div class="card-image"><img src="jj.jpg" height="100"; width="80"; alt="image not available, ask admin">
+</div>
+
+<div class="row grey lighten-2 no-margin no-margin-bottom">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5">
+            <div class="row valign-wrapper">
+                <div class="col s4 center-align">
+                    <img src="jj.jpg" alt="" class="circle responsive-img">
                 </div>
-                <div class="card-stacked">
-                    <p style="margin-bottom: 0em; font-size: medium; margin-left: 1em; margin-top: 0.5em">Felix Ullrich</p>
-                    <p style="font-size: small; margin-left: 2em; margin-top: 0.5em">Kennt sich überall ned so wirklich aus und<br />
-                        schnell abgelenkt. Dafür Patriot.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="row indigo darken-4 no-margin no-margin-bottom">
-    <div class="container">
-        <div class="col s8 m6 l4 left-align">
-            <div class="card horizontal">
-                <div class="card-image"><img src="vorlen.jpg" height="100" width="80"; alt="image not available, ask admin">
-                </div>
-                <div class="card-stacked">
-                    <p style="font-size: medium; margin-bottom: 0em; margin-left: 1em; margin-top: 0.5em">Christoph Vorlen</p>
-                    <p style="font-size: small; margin-left: 2em; margin-top: 0.5em">Hat gesagt Felix soll da was auf Englisch<br />
-                        schreiben, hat der nicht gemacht.</p>
+                <div class="col s8">
+                    <span class="black-text">
+                        <h5>Lucas Thiess</h5>
+                        <p>Hat immer eine Idee, der fast niemand aus dem Team folgen kann.</p>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-  </div>
-  <div class="row indigo darken-4 no-margin no-margin-bottom">
-    <div class="container">
-        <div class="col s8 m6 l4 left-align">
-            <div class="card horizontal">
-                <div class="card-image"><img src="ziegler.jpg" height="100" width="80"; alt="image not available, ask admin">
+</div>
+
+<div class="row grey lighten-3 no-margin no-margin-bottom">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5">
+            <div class="row valign-wrapper">
+                <div class="col s4 center-align">
+                    <img src="jj.jpg" alt="" class="circle responsive-img">
                 </div>
-                <div class="card-stacked">
-                    <p style="font-size: medium; margin-bottom: 0em; margin-left: 1em;margin-top: 0.5em">Daniel Ziegler</p>
-                    <p style="font-size: small; margin-left: 2em; margin-top: 0.5em">Grafiker. Kennt sich mit Designs aus<br/>
-                        und lässts gut aussehen.</p>
+                <div class="col s8">
+                    <span class="black-text">
+                        <h5>Felix Ullrich</h5>
+                        <p>Etwas planlos unterwegs, kümmert sich um Mashups.</p>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-  </div>
+</div>
+
+<div class="row grey lighten-2 no-margin no-margin-bottom">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5">
+            <div class="row valign-wrapper">
+                <div class="col s4 center-align">
+                    <img src="vorlen.jpg" alt="" class="circle responsive-img">
+                </div>
+                <div class="col s8">
+                    <span class="black-text">
+                        <h5>Christoph Vorlen</h5>
+                        <p>Hat überall mitgemacht und den Großteil geplant.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row grey lighten-3 no-margin no-margin-bottom">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="card-panel grey lighten-5">
+            <div class="row valign-wrapper">
+                <div class="col s4 center-align">
+                    <img src="ziegler.jpg" alt="" class="circle responsive-img">
+                </div>
+                <div class="col s8">
+                    <span class="black-text">
+                        <h5>Daniel Ziegler</h5>
+                        <p>Verantwortlich fürs Design der Website. Kennt sich gut mit CSS und HTML aus.</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
  
+
 
   <?php 
 

@@ -50,7 +50,7 @@ session_start();
           <?php endif; ?>
 
         </ul>
-        <a href="#" class="center-align">Rate Presentations</a>
+        <a href="index.php" class="center-align">Rate Presentations</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.php" class="valign-wrapper"><i class="material-icons left">home</i>Home</a></li>
           <li><a href="team.php" class="valign-wrapper"><i class="material-icons left">people</i>Team</a></li>

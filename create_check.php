@@ -1,12 +1,12 @@
 <?php
 include "header.php";
 $conn = new PDO("mysql:host=localhost; dbname=webtech", "oliver", "nlkj");
-$input = $_GET['hello'];
+//$input = $_GET['hello'];
 
-echo $input;
-var_dump($_REQUEST);
-var_dump($_POST);
-var_dump($_GET);
+//echo $input;
+//var_dump($_REQUEST);
+//var_dump($_POST);
+//var_dump($_GET);
 
 
 function randcode($n)
